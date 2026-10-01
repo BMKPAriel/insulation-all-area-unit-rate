@@ -115,6 +115,7 @@ td input,td select{padding:7px 8px;border-radius:7px}
 .gridgraf .kartu{margin-bottom:0}.gridgraf{margin-bottom:12px}
 .kanvas{position:relative;height:280px}
 .c{text-align:center}
+.tabrinci input,.tabrinci select,.tabrinci textarea{width:100%;min-width:0;box-sizing:border-box}
 textarea{width:100%;padding:10px 12px;border:1px solid var(--garis);border-radius:9px;background:#fff;resize:vertical}
 .gridfoto{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
 .slotfoto{border:1px solid var(--garis);border-radius:10px;padding:8px;background:#fff}
@@ -143,7 +144,7 @@ textarea{width:100%;padding:10px 12px;border:1px solid var(--garis);border-radiu
     <img class="logo-besar" src="data:image/jpeg;base64,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" alt="Logo BMKP">
     <h1>Insulation BMKP</h1>
     <p>MA1 · MA2 · MA3 · Utilities</p>
-    <p style="margin-top:-14px;font-size:11px">Versi 4.0 · berbasis SPK</p>
+    <p style="margin-top:-14px;font-size:11px">Versi 4.2 · berbasis SPK</p>
     <div id="gPesan"></div>
     <label>Nama</label><input id="gNama" autocomplete="username" placeholder="Nama Anda">
     <label>PIN</label><input id="gPin" type="password" inputmode="numeric" autocomplete="current-password" placeholder="PIN">
@@ -179,10 +180,10 @@ textarea{width:100%;padding:10px 12px;border:1px solid var(--garis);border-radiu
 
 <script>
 /* ═══════════ setelan ═══════════ */
-var SERVER_URL_BAWAAN = "https://script.google.com/macros/s/AKfycbynled7CPw8wTQl6CqpRKf8SeUqDFjKpFHzRrmUlcB52ILCx7J7y1ZnDc9DDpPEF3LL/exec";   // isi URL /exec di sini setelah deploy, agar tidak perlu diketik pengguna
+var SERVER_URL_BAWAAN = "https://script.google.com/macros/s/AKfycbxXEUDolMd3xGHWQLdTTi-ML3XKMdq-aNWl8mMNvryZuzqhPMEKYYNcGv2rx6-rfmHHRA/exec";   // isi URL /exec di sini setelah deploy, agar tidak perlu diketik pengguna
 
 var S = {
-  url: localStorage.getItem('ins_url_v4') || SERVER_URL_BAWAAN,
+  url: localStorage.getItem('ins_url_v42') || SERVER_URL_BAWAAN,
   nama: '', peran: '', master: null,
   halaman: 'harian',
   tanggal: hariIni(), area: 'MA1',
@@ -205,7 +206,16 @@ function api(aksi, data){
     method:'POST', redirect:'follow',
     headers:{'Content-Type':'text/plain;charset=utf-8'},
     body: JSON.stringify(data)
-  }).then(function(r){ return r.json(); }).then(function(j){
+  }).then(function(r){ return r.text(); }).then(function(t){
+    var j;
+    try { j = JSON.parse(t); }
+    catch(e){
+      var isi = String(t).replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<script[\s\S]*?<\/script>/gi,' ')
+        .replace(/<[^>]+>/g,' ').replace(/&nbsp;|&#39;|&quot;/g,' ').replace(/\s+/g,' ').trim();
+      throw new Error('Server mengirim halaman galat Google, bukan data (aksi '+aksi+'). '+
+        (isi ? 'Isi pesannya: "'+isi.slice(0,220)+'". ' : '')+
+        'Biasanya karena deployment belum diperbarui ke versi terbaru, atau server sedang sibuk — coba lagi sebentar.');
+    }
     if(!j.ok) throw new Error(j.pesan || 'Gagal');
     return j;
   });
@@ -238,7 +248,7 @@ if(!S.url) el('gServer').classList.remove('sembunyi');
 el('gUrl').value = S.url;
 el('gSimpanUrl').onclick = function(){
   S.url = el('gUrl').value.trim();
-  localStorage.setItem('ins_url_v4', S.url);
+  localStorage.setItem('ins_url_v42', S.url);
   el('gPesan').innerHTML = '<div class="pesan ok">Alamat server disimpan.</div>';
 };
 el('gUjiUrl').onclick = function(){
@@ -373,6 +383,8 @@ S.spk = []; S.v4ok = false; S.v4pesan = '';
 function muatSPK(){
   return api('v4SpkList', {}).then(function(j){
     S.spk = j.data || []; S.v4ok = true; S.v4pesan = '';
+    if(j.mode) S.mode = j.mode;
+    if(!j.mode) S.v4lama = true;
   }).catch(function(e){
     S.spk = []; S.v4ok = false; S.v4pesan = e.message;
   });
@@ -386,6 +398,8 @@ function spkArea(area, hanyaAktif){
 function namaSpk(id){ var s = spkDari(id); return s ? s.noSPK : (id ? '(SPK terhapus)' : 'Tanpa SPK'); }
 
 function v4Peringatan(){
+  if(S.v4ok && S.v4lama) return '<div class="pesan bad"><b>Server belum versi 4.2.</b> Rincian SPK belum bisa disimpan. '+
+    'Tempel Server_Insulation_BMKP_V4.gs terbaru ke Code.gs, lalu Deploy &gt; Manage deployments &gt; pensil &gt; New version.</div>';
   if(S.v4ok) return '';
   return '<div class="pesan bad"><b>Modul V4 belum aktif di server.</b> SPK, laporan harian, foto harian, dan dashboard '+
     'membutuhkan server versi 4 (<b>Server_Insulation_BMKP_V4.gs</b>) di Apps Script. '+
@@ -442,7 +456,9 @@ var CUACA = ['','Cerah','Berawan','Gerimis','Hujan','Hujan lebat'];
 function opsiSpkHarian(area){
   var d = spkArea(area, true);
   if(S.spkH && !d.some(function(s){ return s.idSPK===S.spkH; })) S.spkH = '';
-  return '<option value="">Semua SPK / laporan umum area</option>' + d.map(function(s){
+  if(!S.spkH && S.spkPilihOtomatis!==area && modeArea(area)==='SPK' && d.length){ S.spkH = d[0].idSPK; }
+  S.spkPilihOtomatis = area;
+  return '<option value="">'+(modeArea(area)==='SPK' ? '— Tanpa SPK (input per line) —' : 'Semua line / tanpa SPK')+'</option>' + d.map(function(s){
     return '<option value="'+esc(s.idSPK)+'"'+(s.idSPK===S.spkH?' selected':'')+'>'+esc(s.noSPK)+
       (s.uraian?' — '+esc(String(s.uraian).slice(0,40)):'')+'</option>';
   }).join('');
@@ -461,11 +477,11 @@ function pgHarian(){
    '</div>'+
    '<div class="mini" style="margin-top:8px">Pilih SPK supaya daftar line, laporan, dan foto hari ini tercatat ke SPK tersebut. '+
    'SPK baru didaftarkan di menu <b>SPK</b>.</div></div><div id="hIsi"></div>';
-  el('hArea').onchange = function(){ S.spkH=''; el('hSpk').innerHTML = opsiSpkHarian(this.value); };
+  el('hArea').onchange = function(){ S.spkH=''; S.spkPilihOtomatis=''; el('hSpk').innerHTML = opsiSpkHarian(this.value); };
   el('hMuat').onclick = function(){
     S.tanggal = el('hTgl').value; S.area = el('hArea').value; S.spkH = el('hSpk').value; muatHarian();
   };
-  el('hSpk').onchange = function(){ S.spkH = this.value; if(S.harian && S.harianKunci===S.tanggal+'|'+S.area) muatLaporan(); };
+  el('hSpk').onchange = function(){ S.spkH = this.value; if(S.harian && S.harianKunci===S.tanggal+'|'+S.area) muatHarian(); };
   muatHarian();
 }
 
@@ -476,10 +492,13 @@ function muatHarian(){
   Promise.all([
     api('harianGet',{tanggal:S.tanggal, area:S.area}),
     S.v4ok ? api('v4LineSpkMap',{area:S.area}).catch(function(){ return {peta:{}}; }) : Promise.resolve({peta:{}}),
-    S.v4ok ? api('v4LaporanGet',{tanggal:S.tanggal, area:S.area, idSPK:S.spkH}).catch(function(){ return null; }) : Promise.resolve(null)
+    S.v4ok ? api('v4LaporanGet',{tanggal:S.tanggal, area:S.area, idSPK:S.spkH}).catch(function(){ return null; }) : Promise.resolve(null),
+    spkPakaiRincian(sp) ? api('v4ProgresSpkGet',{tanggal:S.tanggal, idSPK:S.spkH}).catch(function(){ return {data:[]}; }) : Promise.resolve({data:[]})
   ]).then(function(r){
     S.harian = r[0].data; S.harianKunci = S.tanggal+'|'+S.area;
     S.petaSPK = r[1].peta || {};
+    S.itemLine = r[1].itemLine || {};
+    S.pspkHari = r[3].data || [];
     S.lap = r[2] || {laporan:null, foto:[], manual:[], batasFoto:5};
     gambarHarian();
   }).catch(function(e){ el('hIsi').innerHTML='<div class="pesan bad">'+esc(e.message)+'</div>'; });
@@ -495,6 +514,7 @@ function muatLaporan(){
 }
 
 function lineCocokSPK(idLine){
+  if((S.itemLine||{})[idLine]) return false;          // dikelola lewat rincian SPK
   if(!S.spkH) return true;
   return (S.petaSPK||{})[idLine] === S.spkH;
 }
@@ -534,27 +554,12 @@ function gambarHarian(){
   }).join('');
 
   var sp = spkDari(S.spkH);
-  var ringkasSpk = '';
-  if(sp){
-    var tgt = sp.targetM || sp.volLineM, p = persen(sp.terpasangM, tgt);
-    var sisaHari = sp.tglTarget ? selisihTgl(S.tanggal, sp.tglTarget) : null;
-    ringkasSpk = '<div class="kartu" style="border-left:5px solid '+warnaArea(sp.area)+'">'+
-      '<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">'+
-        '<div><b style="font-size:16px">SPK '+esc(sp.noSPK)+'</b><div class="mini">'+esc(sp.uraian||'')+'</div></div>'+
-        '<div class="mini" style="text-align:right">Periode '+tglIndo(sp.tglMulai)+' – '+tglIndo(sp.tglTarget)+
-          (sisaHari!==null ? '<br><b style="color:'+(sisaHari<0?'var(--merah)':'var(--arang)')+'">'+
-            (sisaHari<0 ? 'lewat '+(-sisaHari)+' hari' : 'sisa '+sisaHari+' hari')+'</b>' : '')+'</div>'+
-      '</div>'+
-      '<div class="gr2" style="margin-top:10px">'+
-        '<div><span class="mini">Terpasang pipa</span><div><b>'+f1(sp.terpasangM)+'</b> / '+f1(tgt)+' m · <b style="color:'+warnaPersen(p)+'">'+teksPersen(p)+'</b></div>'+batang(p)+'</div>'+
-        (sp.targetM2||sp.volLineM2 ? '<div><span class="mini">Dinding &amp; HE</span><div><b>'+f1(sp.terpasangM2)+'</b> / '+f1(sp.targetM2||sp.volLineM2)+' m²</div>'+batang(persen(sp.terpasangM2, sp.targetM2||sp.volLineM2))+'</div>' : '')+
-        '<div><span class="mini">Line</span><div><b>'+sp.lineSelesai+'</b> selesai dari '+sp.jmlLine+'</div></div>'+
-        '<div><span class="mini">Kebutuhan pekerja</span><div><b>'+(sp.targetPekerja||'—')+'</b> orang</div></div>'+
-      '</div></div>';
-  }
-
+  var pakaiRincian = spkPakaiRincian(sp);
+  var tampilLine = !pakaiRincian || sp.jmlLine > 0;
+  var ringkasSpk = kartuRingkasSpk(sp) + (pakaiRincian ? kartuRincianSpk(sp) : '');
+  if(pakaiRincian) info = info.replace(/<div class="pesan info">[^<]*terbawa ke sini\.<\/div>/,'');
   var html = info + ringkasSpk +
-   '<div class="kartu"><h3>Pekerjaan hari ini'+(sp?' — SPK '+esc(sp.noSPK):'')+'</h3>'+
+   '<div class="kartu'+(tampilLine?'':' sembunyi')+'"><h3>'+(pakaiRincian?'Line terhubung':'Pekerjaan hari ini')+(sp?' — '+esc(sp.noSPK):' — per line')+'</h3>'+
    '<div class="gulir"><table><thead><tr>'+
      '<th style="min-width:210px">Line</th><th style="width:92px">Target</th><th style="width:92px">Terpasang</th>'+
      '<th style="width:120px">Status</th><th style="width:150px">Faktor hambat</th><th style="width:70px">Org</th><th style="width:44px"></th>'+
@@ -572,11 +577,13 @@ function gambarHarian(){
    '</div></div>'+
    kartuLaporan() + kartuFotoHarian() + kartuAbsensi() +
    '<div class="tombol-bawah">'+
-     '<button class="btn a3" id="hSimpanR">Simpan rencana</button>'+
-     '<button class="btn" id="hSimpanA">Simpan realisasi</button>'+
+     (tampilLine ? '<button class="btn a3" id="hSimpanR">Simpan rencana'+(pakaiRincian?' line':'')+'</button>'+
+       '<button class="btn'+(pakaiRincian?' a3':'')+'" id="hSimpanA">Simpan realisasi'+(pakaiRincian?' line':'')+'</button>' : '')+
+     (pakaiRincian ? '<button class="btn" id="hSimpanSpk">Simpan progres SPK</button>' : '')+
    '</div>';
   el('hIsi').innerHTML = html;
   gambarBaris(HAMBAT, peta);
+  if(pakaiRincian){ gambarRincian(); el('hSimpanSpk').onclick = simpanProgresSpk; }
 
   function tambahDariCari(){
     var t = el('hCari').value.trim().toUpperCase();
@@ -598,8 +605,8 @@ function gambarHarian(){
   el('hTambah').onclick = tambahDariCari;
   el('hCari').addEventListener('change', tambahDariCari);
   el('hCari').addEventListener('keydown', function(e){ if(e.key==='Enter') tambahDariCari(); });
-  el('hSimpanR').onclick = simpanRencana;
-  el('hSimpanA').onclick = simpanRealisasi;
+  if(el('hSimpanR')) el('hSimpanR').onclick = simpanRencana;
+  if(el('hSimpanA')) el('hSimpanA').onclick = simpanRealisasi;
   pasangLaporan(); pasangFotoHarian(); pasangAbsensi();
 }
 
@@ -657,6 +664,115 @@ function gambarBaris(hambat, peta){
     var b=e.target.closest('[data-hapus]'); if(!b) return;
     S.barisHarian.splice(+b.dataset.hapus,1); gambarBaris(hambat, peta);
   };
+}
+
+/* ─────────── rincian SPK di Input harian (V4.2) ─────────── */
+var STATUS_LS = ['','Dikerjakan','Selesai'];
+
+function spkPakaiRincian(sp){ return !!(sp && sp.item && sp.item.length); }
+
+function kartuRingkasSpk(sp){
+  if(!sp) return '';
+  var sisaHari = sp.tglTarget ? selisihTgl(S.tanggal, sp.tglTarget) : null;
+  var isi;
+  if(spkPakaiRincian(sp)){
+    isi = '<div class="gr2" style="margin-top:10px">'+
+      '<div><span class="mini">Capaian SPK</span><div><b style="font-size:20px;color:'+warnaPersen(sp.persen)+'">'+teksPersen(sp.persen)+'</b></div>'+batang(sp.persen)+'</div>'+
+      (sp.ringkas||[]).map(function(r){
+        var p = persen(r.kum, r.vol);
+        return '<div><span class="mini">'+esc(r.kelompok)+' ('+satTeks(r.satuan)+')</span><div><b>'+f1(r.kum)+'</b> / '+f1(r.vol)+' · <b style="color:'+warnaPersen(p)+'">'+teksPersen(p)+'</b></div>'+batang(p)+'</div>';
+      }).join('')+
+      '<div><span class="mini">Notifikasi / WO</span><div class="mini" style="color:var(--arang)">'+esc(sp.noWO||'—').replace(/\n/g,'<br>')+'</div></div>'+
+    '</div>';
+  } else {
+    var tgt = sp.targetM || sp.volLineM, p = persen(sp.terpasangM, tgt);
+    isi = '<div class="gr2" style="margin-top:10px">'+
+      '<div><span class="mini">Terpasang pipa</span><div><b>'+f1(sp.terpasangM)+'</b> / '+f1(tgt)+' m · <b style="color:'+warnaPersen(p)+'">'+teksPersen(p)+'</b></div>'+batang(p)+'</div>'+
+      '<div><span class="mini">Line</span><div><b>'+sp.lineSelesai+'</b> selesai dari '+sp.jmlLine+'</div></div>'+
+      '<div><span class="mini">Kebutuhan pekerja</span><div><b>'+(sp.targetPekerja||'—')+'</b> orang</div></div></div>';
+  }
+  return '<div class="kartu" style="border-left:5px solid '+warnaArea(sp.area)+'">'+
+    '<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">'+
+      '<div><b style="font-size:16px">'+esc(sp.noSPK)+'</b><div class="mini">'+esc(sp.uraian||'')+(sp.lokasi?' · '+esc(sp.lokasi):'')+'</div></div>'+
+      '<div class="mini" style="text-align:right">Durasi '+tglIndo(sp.tglMulai)+' – '+tglIndo(sp.tglTarget)+
+        (sisaHari!==null ? '<br><b style="color:'+(sisaHari<0?'var(--merah)':'var(--arang)')+'">'+(sisaHari<0 ? 'lewat '+(-sisaHari)+' hari' : 'sisa '+sisaHari+' hari')+'</b>' : '')+'</div>'+
+    '</div>'+isi+'</div>';
+}
+
+function kartuRincianSpk(sp){
+  var hariIniRow = {}; (S.pspkHari||[]).forEach(function(r){ hariIniRow[r.idItem] = r; });
+  var its = sp.item.filter(function(it){ return it.inScope; });
+  S.rincian = its.map(function(it){
+    var r = hariIniRow[it.idItem] || {};
+    var hariIniVol = n2(r.volume);
+    return { it: it, target: r.target||'', volume: r.volume===''||r.volume==null ? '' : r.volume, status: r.status||'',
+             faktorHambat: r.faktorHambat||'', catatan: r.catatan||'', jmlPekerja: r.jmlPekerja||'',
+             sdKemarin: Math.max(0, n2(it.kum) - hariIniVol) };
+  });
+  return '<div class="kartu"><h3>Rincian pekerjaan hari ini — '+esc(sp.noSPK)+'</h3>'+
+    '<div class="mini" style="margin-bottom:8px">Pagi: isi <b>Target</b> hari ini. Sore/malam: isi <b>Hari ini</b> (volume yang selesai dikerjakan), status, dan hambatan. '+
+    'Satu tombol <b>Simpan progres SPK</b> untuk keduanya — boleh disimpan berkali-kali.</div>'+
+    '<div class="gulir"><table><thead><tr>'+
+      '<th style="min-width:230px">Pekerjaan</th><th style="width:100px">Volume SPK</th><th style="width:90px">s.d. kemarin</th>'+
+      '<th style="width:82px">Target</th><th style="width:92px">Hari ini</th><th style="width:118px">Status</th>'+
+      '<th style="width:140px">Faktor hambat</th><th style="width:64px">Org</th>'+
+    '</tr></thead><tbody id="rBody"></tbody></table></div></div>';
+}
+
+function gambarRincian(){
+  var b = el('rBody'); if(!b) return;
+  b.innerHTML = S.rincian.map(function(r, i){
+    var it = r.it, ls = itemLs(it), ghk = /ghk/i.test(it.kategori);
+    var sisa = Math.max(0, n2(it.total) - r.sdKemarin);
+    var label = '<div>'+pilKat(it.kategori)+' <b>'+esc(it.objek||'')+'</b>'+(it.ukuran?' <b>'+esc(it.ukuran)+'"</b>':'')+'</div>'+
+      '<div class="mini">'+(it.no?esc(it.no)+'. ':'')+esc(it.uraian||'')+(it.noLine?' · line '+esc(it.noLine):'')+'</div>';
+    if(ls){
+      return '<tr><td>'+label+'</td><td class="mini">Ls</td><td class="mini">'+esc(it.status||'—')+'</td><td></td>'+
+        '<td>'+(ghk ? '<label style="display:flex;gap:6px;align-items:center;font-weight:400;margin:0"><input type="checkbox" data-r="'+i+'" data-k="ghk" style="width:auto"'+(r.status?' checked':'')+'> dikerjakan</label>' : '')+'</td>'+
+        '<td>'+(ghk ? '' : '<select data-r="'+i+'" data-k="status">'+STATUS_LS.map(function(s){ return '<option'+(s===r.status?' selected':'')+'>'+s+'</option>'; }).join('')+'</select>')+'</td>'+
+        '<td><select data-r="'+i+'" data-k="faktorHambat">'+HAMBAT.map(function(s){ return '<option'+(s===r.faktorHambat?' selected':'')+'>'+s+'</option>'; }).join('')+'</select></td>'+
+        '<td><input class="angka" data-r="'+i+'" data-k="jmlPekerja" value="'+esc(r.jmlPekerja)+'" inputmode="numeric"></td></tr>';
+    }
+    return '<tr'+(sisa<=0.001?' style="background:#F3F8F4"':'')+'><td>'+label+'</td>'+
+      '<td><b>'+f1(it.total)+'</b> '+satTeks(it.satuan)+(n2(it.jumlah)>1?'<div class="mini">'+f1(it.volume)+' × '+f1(it.jumlah)+'</div>':'')+'</td>'+
+      '<td>'+f1(r.sdKemarin)+'<div class="mini">sisa '+f1(sisa)+'</div></td>'+
+      '<td><input class="angka" data-r="'+i+'" data-k="target" value="'+esc(r.target)+'" inputmode="decimal" placeholder="'+f1(Math.min(sisa, n2(it.total)))+'"></td>'+
+      '<td><input class="angka" data-r="'+i+'" data-k="volume" value="'+esc(r.volume)+'" inputmode="decimal">'+
+        (sisa>0.001 ? '<button class="btn a3 kecil" data-rsisa="'+i+'" style="margin-top:4px;width:100%">Selesai ('+f1(sisa)+')</button>' : '')+'</td>'+
+      '<td><select data-r="'+i+'" data-k="status">'+['','Lanjut','Selesai'].map(function(s){ return '<option'+(s===r.status?' selected':'')+'>'+s+'</option>'; }).join('')+'</select></td>'+
+      '<td><select data-r="'+i+'" data-k="faktorHambat">'+HAMBAT.map(function(s){ return '<option'+(s===r.faktorHambat?' selected':'')+'>'+s+'</option>'; }).join('')+'</select></td>'+
+      '<td><input class="angka" data-r="'+i+'" data-k="jmlPekerja" value="'+esc(r.jmlPekerja)+'" inputmode="numeric"></td></tr>';
+  }).join('') || '<tr><td colspan="8" class="kosong">SPK ini belum punya rincian dalam scope.</td></tr>';
+  b.oninput = b.onchange = function(e){
+    var t = e.target; if(t.dataset.r===undefined) return;
+    var r = S.rincian[+t.dataset.r];
+    if(t.dataset.k==='ghk') r.status = t.checked ? 'Dikerjakan' : '';
+    else r[t.dataset.k] = t.value;
+  };
+  b.onclick = function(e){
+    var s = e.target.closest('[data-rsisa]'); if(!s) return;
+    var r = S.rincian[+s.dataset.rsisa];
+    r.volume = String(Math.round(Math.max(0, n2(r.it.total) - r.sdKemarin)*100)/100); r.status = 'Selesai';
+    gambarRincian();
+  };
+}
+
+function simpanProgresSpk(){
+  var sp = spkDari(S.spkH); if(!sp) return;
+  var kurang = S.rincian.filter(function(r){
+    return !itemLs(r.it) && r.volume!=='' && n2(r.target)>0 && n2(r.volume) < n2(r.target) && !r.faktorHambat;
+  });
+  if(kurang.length){ kabar('Ada rincian di bawah target tapi faktor hambatnya belum dipilih.','bad'); return; }
+  var lebih = S.rincian.filter(function(r){ return !itemLs(r.it) && r.sdKemarin + n2(r.volume) > n2(r.it.total) + 0.001; });
+  if(lebih.length && !confirm(lebih.length+' rincian melebihi volume SPK. Tetap simpan?')) return;
+  var rows = S.rincian.map(function(r){
+    return { idItem:r.it.idItem, target:r.target, volume:r.volume, status:r.status, faktorHambat:r.faktorHambat,
+             catatan:r.catatan, jmlPekerja:r.jmlPekerja };
+  });
+  sibuk(true,'Menyimpan progres SPK...');
+  api('v4ProgresSpkSimpan',{tanggal:S.tanggal, area:S.area, idSPK:sp.idSPK, rows:rows})
+    .then(function(j){ sibuk(false); kabar('Progres SPK tersimpan ('+j.jumlah+' rincian).'); muatSPK().then(muatHarian); })
+    .catch(function(e){ sibuk(false); kabar(e.message,'bad'); });
 }
 
 /* ─────────── laporan harian ─────────── */
@@ -838,7 +954,7 @@ function pasangAbsensi(){
 }
 
 function simpanRencana(){
-  var rows = S.barisHarian.filter(function(b){ return b.idLine; }).map(function(b){
+  var rows = S.barisHarian.filter(function(b){ return b.idLine && !(S.itemLine||{})[b.idLine]; }).map(function(b){
     return {idLine:b.idLine, targetM:n2(b.targetM), regu:b.regu||'', jmlPekerja:n2(b.jmlPekerja)};
   });
   sibuk(true,'Menyimpan rencana...');
@@ -848,7 +964,7 @@ function simpanRencana(){
 }
 
 function simpanRealisasi(){
-  var rows = S.barisHarian.filter(function(b){ return b.idLine && (b.terpasangM!=='' || b.status); }).map(function(b){
+  var rows = S.barisHarian.filter(function(b){ return b.idLine && !(S.itemLine||{})[b.idLine] && (b.terpasangM!=='' || b.status); }).map(function(b){
     return {idLine:b.idLine, terpasangM:n2(b.terpasangM), status:b.status||'Lanjut',
             faktorHambat:b.faktorHambat||'', catatan:b.catatan||'', satuan:b.satuan||'Meter'};
   });
@@ -866,12 +982,27 @@ function simpanRealisasi(){
 }
 
 /* ─────────── cetak laporan harian ─────────── */
+function tabelCetakRincian(sp){
+  var hr = {}; (S.rincian||[]).forEach(function(r){ hr[r.it.idItem] = r; });
+  return '<table><thead><tr><th>No</th><th>Rincian pekerjaan SPK</th><th>Volume SPK</th><th>s.d. kemarin</th><th>Target</th><th>Hari ini</th><th>Kumulatif</th><th>%</th><th>Status</th></tr></thead><tbody>'+
+    sp.item.filter(function(it){ return it.inScope; }).map(function(it){
+      var r = hr[it.idItem] || {sdKemarin: it.kum, volume:'', target:'', status:''};
+      var ls = itemLs(it), kum = r.sdKemarin + n2(r.volume);
+      return '<tr><td class="c">'+esc(it.no||'')+'</td><td>'+esc(it.kategori)+' — '+esc(it.uraian)+(it.objek?' <b>'+esc(it.objek)+'</b>':'')+(it.ukuran?' '+esc(it.ukuran)+'"':'')+'</td>'+
+        (ls ? '<td class="c">Ls</td><td></td><td></td><td></td><td></td><td></td>' :
+        '<td class="r">'+f1(it.total)+' '+satTeks(it.satuan)+'</td><td class="r">'+f1(r.sdKemarin)+'</td><td class="r">'+(r.target===''?'':f1(r.target))+'</td>'+
+        '<td class="r"><b>'+(r.volume===''?'':f1(r.volume))+'</b></td><td class="r">'+f1(kum)+'</td><td class="c">'+teksPersen(persen(Math.min(kum,it.total), it.total))+'</td>')+
+        '<td>'+esc(r.status||it.status||'')+'</td></tr>';
+    }).join('')+'</tbody></table>'+
+    '<table><tr><th>Capaian SPK</th><td class="c"><b>'+teksPersen(sp.persen)+'</b></td>'+
+    (sp.ringkas||[]).map(function(x){ return '<th>'+esc(x.kelompok)+' ('+satTeks(x.satuan)+')</th><td class="c">'+f1(x.kum)+' / '+f1(x.vol)+'</td>'; }).join('')+'</tr></table>';
+}
 function cetakLaporanHarian(){
   var D = S.harian, peta = {};
   D.lines.forEach(function(L){ peta[L.idLine]=L; });
   var L = el('lpCuaca') ? ambilLaporan() : ((S.lap&&S.lap.laporan)||{});
   var sp = spkDari(S.spkH);
-  var baris = S.barisHarian.filter(function(b){ return lineCocokSPK(b.idLine); });
+  var baris = S.barisHarian.filter(function(b){ return lineCocokSPK(b.idLine) && (!spkPakaiRincian(sp) || n2(b.terpasangM) || n2(b.targetM)); });
   var foto = fotoLaporanIni();
   var manual = (S.lap && S.lap.manual) || [];
   var hit = {}; manual.forEach(function(m){ hit[m.status] = (hit[m.status]||0)+1; });
@@ -885,7 +1016,7 @@ function cetakLaporanHarian(){
     return '<tr><td class="c">'+(i+1)+'</td><td>'+esc(Ln.noLine)+'<br><small>'+esc(Ln.noDWG||'')+'</small></td>'+
       '<td class="c">'+esc(Ln.ringkasUkuran ? String(Ln.ringkasUkuran).split(' — ')[0].replace(/^[\d.]+\s*/,'').slice(0,28) : (bedahNoLine(Ln.noLine).ukuran ? ukuranTeks(bedahNoLine(Ln.noLine).ukuran)+'"' : ''))+'</td><td class="r">'+f1(b.targetM)+'</td><td class="r">'+f1(b.terpasangM)+'</td>'+
       '<td class="c">'+(m2?'m²':'m')+'</td><td>'+esc(b.status||'')+'</td><td>'+esc(b.faktorHambat||'')+'</td></tr>';
-  }).join('') || '<tr><td colspan="8" class="c">Tidak ada pekerjaan tercatat</td></tr>';
+  }).join('') || '<tr><td colspan="8" class="c">'+(spkPakaiRincian(sp)?'Progres dicatat per rincian SPK (tabel di bawah)':'Tidak ada pekerjaan tercatat')+'</td></tr>';
 
   function kotak(j, isi){ return '<div class="blok"><div class="jb">'+j+'</div><div class="ib">'+(esc(isi||'').replace(/\n/g,'<br>')||'—')+'</div></div>'; }
 
@@ -908,7 +1039,10 @@ function cetakLaporanHarian(){
     '<h2>LAPORAN HARIAN PEKERJAAN INSULATION</h2>'+
     '<table class="info"><tr><td>Hari / tanggal</td><td>: '+tglIndo(S.tanggal,true)+'</td></tr>'+
       '<tr><td>Area / kontrak</td><td>: '+esc(NAMA_AREA[S.area]||S.area)+'</td></tr>'+
-      '<tr><td>No. SPK</td><td>: '+(sp?esc(sp.noSPK)+(sp.tglSPK?' tanggal '+tglIndo(sp.tglSPK):''):'—')+'</td></tr>'+
+      '<tr><td>No. SPK / FPK</td><td>: '+(sp?esc(sp.noSPK)+(sp.tglSPK?' tanggal '+tglIndo(sp.tglSPK):''):'—')+'</td></tr>'+
+      (sp&&sp.noWO?'<tr><td>Notifikasi / WO</td><td>: '+esc(sp.noWO).replace(/\n/g,' · ')+'</td></tr>':'')+
+      (sp&&sp.noKontrak?'<tr><td>No. Kontrak</td><td>: '+esc(sp.noKontrak)+'</td></tr>':'')+
+      (sp&&sp.tglTarget?'<tr><td>Durasi</td><td>: '+tglIndo(sp.tglMulai)+' s/d '+tglIndo(sp.tglTarget)+'</td></tr>':'')+
       (sp&&sp.uraian?'<tr><td>Lingkup SPK</td><td>: '+esc(sp.uraian)+'</td></tr>':'')+
       '<tr><td>Cuaca</td><td>: '+esc(L.cuaca||'—')+'</td></tr>'+
       '<tr><td>Jam kerja</td><td>: '+esc(L.jamMulai||'')+' – '+esc(L.jamSelesai||'')+'</td></tr>'+
@@ -918,7 +1052,8 @@ function cetakLaporanHarian(){
     '<table><thead><tr><th>No</th><th>No line / DWG</th><th>Ukuran</th><th>Target</th><th>Terpasang</th><th>Sat</th><th>Status</th><th>Hambatan</th></tr></thead>'+
     '<tbody>'+isiBaris+'</tbody><tfoot><tr><th colspan="3" class="r">Jumlah hari ini</th>'+
       '<th class="r">'+f1(tgtM)+' m'+(tgtM2?' · '+f1(tgtM2)+' m²':'')+'</th><th class="r">'+f1(totM)+' m'+(totM2?' · '+f1(totM2)+' m²':'')+'</th><th colspan="3"></th></tr></tfoot></table>'+
-    (sp ? '<table><tr><th>Kumulatif SPK</th><th>Target</th><th>Terpasang s.d. hari ini</th><th>Capaian</th><th>Line selesai</th></tr>'+
+    (spkPakaiRincian(sp) ? tabelCetakRincian(sp) : '')+
+    (sp && !spkPakaiRincian(sp) ? '<table><tr><th>Kumulatif SPK</th><th>Target</th><th>Terpasang s.d. hari ini</th><th>Capaian</th><th>Line selesai</th></tr>'+
       '<tr><td>Pipa (meter lari)</td><td class="r">'+f1(sp.targetM||sp.volLineM)+'</td><td class="r">'+f1(sp.terpasangM)+'</td>'+
       '<td class="c">'+teksPersen(persen(sp.terpasangM, sp.targetM||sp.volLineM))+'</td><td class="c">'+sp.lineSelesai+' / '+sp.jmlLine+'</td></tr></table>' : '')+
     '<div class="dua">'+kotak('Uraian kegiatan',L.kegiatan)+kotak('Kendala / hambatan',L.kendala)+
@@ -1972,11 +2107,28 @@ function muatRekapAbsensi(){
   }).catch(function(e){ el('aRekap').innerHTML='<div class="pesan bad">'+esc(e.message)+'</div>'; });
 }
 
-/* ═══════════════════ SPK — SURAT PERINTAH KERJA ═══════════════════ */
+/* ═══════════════════ SPK — FORM PERINTAH KERJA (V4.2) ═══════════════════
+   Satu SPK/FPK berisi beberapa rincian pekerjaan (persiapan, bongkar, fabrikasi,
+   pasang, GHK) dengan ukuran pipa, volume, dan satuan masing-masing.
+   Area yang belum memakai SPK tetap bisa input per line (mode LINE).        */
 S.spkArea = '';
+var KATEGORI_SPK = ['Persiapan','Bongkar','Fabrikasi','Pasang','Bongkar-pasang','GHK','Lain-lain'];
+var SATUAN_SPK = ['M','M2','M3','Box','Unit','Ls'];
+var UKURAN_SPK = ['','1/2','3/4','1','1 1/2','2','3','4','6','8','10','12','14','16','18','20','24','30'];
+var WARNA_KAT = {'Persiapan':'#5B6B7A','Bongkar':'#B5562B','Fabrikasi':'#7A4E9C','Pasang':'#1F7A44','Bongkar-pasang':'#2F78B5','GHK':'#6B6A66','Lain-lain':'#6B6A66'};
+function pilKat(k){ return '<span class="pil" style="background:'+(WARNA_KAT[k]||'#6B6A66')+';color:#fff">'+esc(k||'—')+'</span>'; }
+function satTeks(s){ return ({M:'m', M2:'m²', M3:'m³', Ls:'Ls'})[s] || String(s||'').toLowerCase(); }
+function itemLs(it){ return /ls|lot/i.test(it.satuan||'') || !n2(it.total||n2(it.volume)*(n2(it.jumlah)||1)); }
+function modeArea(a){ return ((S.mode||{}).mode||{})[a] || (a==='MA3' ? 'SPK' : 'LINE'); }
+function kontrakArea(a){ return ((S.mode||{}).kontrak||{})[a] || ''; }
+function ringkasTeks(s){
+  if(!s.item || !s.item.length) return s.volLineM ? f1(s.terpasangM)+' / '+f1(s.volLineM)+' m' : '—';
+  return (s.ringkas||[]).map(function(r){ return r.kelompok+' '+f1(r.kum)+'/'+f1(r.vol)+' '+satTeks(r.satuan); }).join(' · ') || (s.item.length+' rincian');
+}
 
 function pgSpk(){
-  judul('SPK', 'Setiap pekerjaan insulation di tiap area berjalan berdasarkan Surat Perintah Kerja');
+  judul('SPK', 'Form Perintah Kerja dari user — satu SPK berisi beberapa rincian pekerjaan');
+  var boleh = S.peran!=='baca' && S.v4ok;
   el('isi').innerHTML = v4Peringatan() +
    '<div class="kartu"><div class="baris">'+
      '<div><label>Area</label><select id="spArea"><option value="">Semua area</option>'+
@@ -1984,16 +2136,16 @@ function pgSpk(){
      '</select></div>'+
      '<div><label>Status</label><select id="spStatus"><option value="">Semua</option><option selected>Aktif</option><option>Selesai</option><option>Ditutup</option></select></div>'+
      '<div style="flex:0 0 auto"><button class="btn a2" id="spMuat">Tampilkan</button></div>'+
-     '<div style="flex:0 0 auto"><button class="btn" id="spBaru"'+(S.peran==='baca'||!S.v4ok?' disabled':'')+'>+ SPK baru</button></div>'+
+     '<div style="flex:0 0 auto"><button class="btn" id="spBaru"'+(boleh?'':' disabled')+'>+ SPK baru</button></div>'+
    '</div>'+
-   '<div class="mini" style="margin-top:8px">Alurnya: <b>1)</b> daftarkan SPK yang diterima dari user · <b>2)</b> pasang line yang diperintahkan ke SPK itu · '+
-   '<b>3)</b> input harian dipilih per SPK, sehingga capaian tiap SPK terlihat sendiri-sendiri.</div></div>'+
-   '<div id="spIsi"><div class="kosong">Memuat…</div></div>';
+   '<div class="mini" style="margin-top:8px">Isi SPK persis seperti Form Perintah Kerja: nomor FPK, Notifikasi/WO, durasi, lalu <b>rincian pekerjaan</b> '+
+   '(ukuran pipa, volume, satuan). Progres harian diisi per rincian di menu <b>Input harian</b>.</div></div>'+
+   '<div id="spFpk"></div><div id="spIsi"><div class="kosong">Memuat…</div></div><div id="spMode"></div>';
   el('spMuat').onclick = function(){ S.spkArea = el('spArea').value; gambarSpk(); };
   el('spArea').onchange = el('spMuat').onclick;
   el('spStatus').onchange = gambarSpk;
   el('spBaru').onclick = function(){ formSpk(null); };
-  muatSPK().then(gambarSpk);
+  muatSPK().then(function(){ gambarSpk(); kartuFpkContoh(); kartuMode(); });
 }
 
 function gambarSpk(){
@@ -2001,14 +2153,12 @@ function gambarSpk(){
   var data = S.spk.filter(function(s){ return (!S.spkArea || s.area===S.spkArea) && (!st || s.status===st); });
   var ringkas = S.master.area.filter(function(a){ return !S.spkArea || a===S.spkArea; }).map(function(a, i){
     var d = S.spk.filter(function(s){ return s.area===a && s.status==='Aktif'; });
-    var tgt = d.reduce(function(m,s){ return m + (s.targetM||s.volLineM); },0);
-    var psg = d.reduce(function(m,s){ return m + s.terpasangM; },0);
-    var p = persen(psg, tgt);
-    return '<div class="stat" style="border-top:4px solid '+warnaArea(a,i)+'"><span>'+esc(a)+'</span>'+
+    var nilai = d.filter(function(s){ return s.persen!==null; });
+    var p = nilai.length ? Math.round(nilai.reduce(function(m,s){ return m+s.persen; },0)/nilai.length) : null;
+    return '<div class="stat" style="border-top:4px solid '+warnaArea(a,i)+'"><span>'+esc(a)+' · mode '+(modeArea(a)==='SPK'?'SPK':'per line')+'</span>'+
       '<b>'+d.length+' <small style="font-size:12px;font-weight:600">SPK aktif</small></b>'+
-      '<span>'+f1(psg)+' / '+f1(tgt)+' m · <b style="color:'+warnaPersen(p)+'">'+teksPersen(p)+'</b></span>'+batang(p, warnaArea(a,i))+'</div>';
+      '<span>rata-rata capaian <b style="color:'+warnaPersen(p)+'">'+teksPersen(p)+'</b></span>'+batang(p, warnaArea(a,i))+'</div>';
   }).join('');
-
   if(!data.length){
     el('spIsi').innerHTML = '<div class="gr2" style="margin-bottom:12px">'+ringkas+'</div>'+
       '<div class="kosong">Belum ada SPK'+(S.spkArea?' di '+esc(S.spkArea):'')+'. Tekan <b>+ SPK baru</b>.</div>';
@@ -2017,27 +2167,27 @@ function gambarSpk(){
   var hari = hariIni();
   el('spIsi').innerHTML = '<div class="gr2" style="margin-bottom:12px">'+ringkas+'</div>'+
    '<div class="gulir"><table><thead><tr>'+
-    '<th style="min-width:150px">No SPK</th><th style="width:80px">Area</th><th style="min-width:200px">Lingkup</th>'+
-    '<th style="min-width:150px">Periode</th><th style="width:150px">Pipa (m)</th><th style="width:110px">m²</th>'+
-    '<th style="width:80px">Line</th><th style="width:80px">Status</th><th style="width:120px"></th>'+
+    '<th style="min-width:170px">No SPK / FPK</th><th style="width:70px">Area</th><th style="min-width:220px">Pekerjaan</th>'+
+    '<th style="min-width:140px">Durasi</th><th style="min-width:200px">Rincian (terpasang / volume)</th><th style="width:130px">Capaian</th>'+
+    '<th style="width:80px">Status</th><th style="width:120px"></th>'+
    '</tr></thead><tbody>'+
    data.map(function(s){
-     var tgt = s.targetM || s.volLineM, p = persen(s.terpasangM, tgt);
-     var sisa = s.tglTarget ? selisihTgl(hari, s.tglTarget) : null;
+     var p = s.persen, sisa = s.tglTarget ? selisihTgl(hari, s.tglTarget) : null;
      var telat = s.status==='Aktif' && sisa!==null && sisa<0 && (p===null || p<100);
-     return '<tr'+(telat?' style="background:#FBEAEA"':'')+'><td><b>'+esc(s.noSPK)+'</b><div class="mini">'+tglIndo(s.tglSPK)+'</div></td>'+
+     return '<tr'+(telat?' style="background:#FBEAEA"':'')+'><td><b>'+esc(s.noSPK)+'</b><div class="mini">'+tglIndo(s.tglSPK)+
+         (s.noWO?'<br>WO '+esc(String(s.noWO).split('\n')[0]):'')+'</div></td>'+
        '<td><span class="pil" style="background:'+warnaArea(s.area)+';color:#fff">'+esc(s.area)+'</span></td>'+
        '<td style="font-size:13px">'+esc(s.uraian||'—')+(s.lokasi?'<div class="mini">'+esc(s.lokasi)+'</div>':'')+'</td>'+
        '<td class="mini">'+tglIndo(s.tglMulai)+' – '+tglIndo(s.tglTarget)+
          (sisa!==null && s.status==='Aktif' ? '<br><b style="color:'+(sisa<0?'var(--merah)':'var(--arang)')+'">'+(sisa<0?'lewat '+(-sisa)+' hari':'sisa '+sisa+' hari')+'</b>' : '')+'</td>'+
-       '<td>'+f1(s.terpasangM)+' / '+f1(tgt)+' <b style="color:'+warnaPersen(p)+'">'+teksPersen(p)+'</b>'+batang(p)+'</td>'+
-       '<td>'+(s.targetM2||s.volLineM2 ? f1(s.terpasangM2)+' / '+f1(s.targetM2||s.volLineM2) : '<span class="mini">—</span>')+'</td>'+
-       '<td class="angka">'+s.lineSelesai+' / '+s.jmlLine+'</td>'+
+       '<td class="mini">'+esc(ringkasTeks(s))+(s.item&&s.item.length?'<br>'+s.item.length+' rincian':'')+'</td>'+
+       '<td><b style="color:'+warnaPersen(p)+'">'+teksPersen(p)+'</b>'+batang(p)+'</td>'+
        '<td><span class="pil '+(s.status==='Aktif'?'p-lanjut':(s.status==='Selesai'?'p-cetak':'p-sket'))+'">'+esc(s.status)+'</span></td>'+
        '<td style="white-space:nowrap"><button class="btn a3 kecil" data-bukaspk="'+esc(s.idSPK)+'">Buka</button>'+
          (S.peran==='manajemen' ? ' <button class="btn kecil" data-hapusspk="'+esc(s.idSPK)+'">Hapus</button>' : '')+'</td></tr>';
    }).join('')+'</tbody></table></div>'+
-   '<div class="mini" style="margin-top:6px">Persen dihitung dari target meter di SPK; kalau target belum diisi, dari jumlah volume line yang dipasang ke SPK. Baris merah = lewat tanggal target dan belum 100%.</div>';
+   '<div class="mini" style="margin-top:6px">Capaian = rata-rata persen rincian yang bervolume (meter, m², m³). Persiapan dan GHK dicatat sebagai status. '+
+   'Baris merah = lewat tanggal selesai dan belum 100%.</div>';
 
   el('spIsi').onclick = function(e){
     var b = e.target.closest('[data-bukaspk]');
@@ -2045,7 +2195,7 @@ function gambarSpk(){
     var h = e.target.closest('[data-hapusspk]');
     if(h){
       var s = spkDari(h.dataset.hapusspk);
-      if(!confirm('Hapus SPK '+s.noSPK+'?\n\nLine-nya TIDAK ikut terhapus, hanya dilepas dari SPK ini. Progres harian tetap aman.')) return;
+      if(!confirm('Hapus SPK '+s.noSPK+' beserta rincian dan progres hariannya?\n\nLine yang terhubung TIDAK ikut terhapus.')) return;
       sibuk(true,'Menghapus...');
       api('v4SpkHapus',{idSPK:s.idSPK}).then(function(){ sibuk(false); kabar('SPK dihapus.'); muatSPK().then(gambarSpk); })
         .catch(function(er){ sibuk(false); kabar(er.message,'bad'); });
@@ -2053,52 +2203,209 @@ function gambarSpk(){
   };
 }
 
+/* ─────────── mode kerja per area ─────────── */
+function kartuMode(){
+  if(S.peran!=='manajemen' || !S.v4ok){ el('spMode').innerHTML=''; return; }
+  el('spMode').innerHTML = '<div class="kartu"><h3>Cara input tiap area</h3>'+
+    '<div class="mini" style="margin-bottom:8px"><b>Berbasis SPK</b> = Input harian langsung membuka rincian SPK. '+
+    '<b>Per line</b> = cara lama, input per nomor line (SPK tetap boleh dipakai). Bisa diubah kapan saja.</div>'+
+    '<div class="gr2">'+S.master.area.map(function(a){
+      return '<div><label>'+esc(a)+'</label><select data-mode="'+esc(a)+'">'+
+        '<option value="SPK"'+(modeArea(a)==='SPK'?' selected':'')+'>Berbasis SPK</option>'+
+        '<option value="LINE"'+(modeArea(a)==='LINE'?' selected':'')+'>Per line</option></select></div>';
+    }).join('')+'</div><button class="btn kecil" id="mdSimpan" style="margin-top:10px">Simpan cara input</button></div>';
+  el('mdSimpan').onclick = function(){
+    var m = {};
+    [].forEach.call(document.querySelectorAll('[data-mode]'), function(x){ m[x.dataset.mode] = x.value; });
+    sibuk(true,'Menyimpan...');
+    api('v4ModeSimpan',{mode:m}).then(function(j){ sibuk(false); S.mode = j.mode; kabar('Cara input tersimpan.'); gambarSpk(); })
+      .catch(function(e){ sibuk(false); kabar(e.message,'bad'); });
+  };
+}
+
+/* ─────────── formulir SPK + rincian pekerjaan ─────────── */
+function itemKosong(kat){
+  var d = {kategori:kat||'Bongkar-pasang', no:'', uraian:'', objek:'', ukuran:'', volume:'', jumlah:'', satuan:'M', inScope:true, noLineInput:''};
+  if(kat==='Persiapan'){ d.uraian='Persiapan Izin Kerja (JSA & SIKA)'; d.satuan='Ls'; }
+  if(kat==='GHK'){ d.uraian='GHK area kerja setiap hari setelah pembongkaran dan pemasangan isolasi'; d.satuan='Ls'; }
+  if(kat==='Fabrikasi'){ d.uraian='Fabrikasi isolasi yang akan dilakukan perbaikan'; d.satuan='Ls'; }
+  return d;
+}
+
 function formSpk(s){
   var baru = !s;
-  s = s || {area: S.spkArea || S.master.area[0], status:'Aktif', tglSPK:hariIni(), tglMulai:hariIni()};
+  var area0 = S.spkArea || S.area || S.master.area[0];
+  s = s || {area: area0, status:'Aktif', tglSPK:hariIni(), tglMulai:hariIni(), noKontrak: kontrakArea(area0),
+            item:[itemKosong('Persiapan'), itemKosong('Bongkar-pasang'), itemKosong('GHK')]};
+  S.formItem = (s.item||[]).map(function(it){ var o = Object.assign({}, it); o.noLineInput = it.noLine || ''; return o; });
   var boleh = S.peran!=='baca';
-  judul(baru ? 'SPK baru' : 'SPK '+s.noSPK, baru ? 'Isi sesuai surat perintah kerja dari user' : (NAMA_AREA[s.area]||s.area));
-  function inp(id, lbl, val, ph, tipe){
-    return '<div><label>'+lbl+'</label><input id="'+id+'" '+(tipe?'type="'+tipe+'" ':'')+'value="'+esc(val==null?'':val)+'" placeholder="'+(ph||'')+'"'+(boleh?'':' disabled')+'></div>';
+  judul(baru ? 'SPK baru' : 'SPK '+s.noSPK, baru ? 'Isi sesuai Form Perintah Kerja dari user' : (NAMA_AREA[s.area]||s.area));
+  function inp(id, lbl, val, ph, tipe, lebar){
+    return '<div'+(lebar?' style="grid-column:1/-1"':'')+'><label>'+lbl+'</label><input id="'+id+'" '+(tipe?'type="'+tipe+'" ':'')+'value="'+esc(val==null?'':val)+'" placeholder="'+(ph||'')+'"'+(boleh?'':' disabled')+'></div>';
   }
   el('isi').innerHTML =
-   '<div class="kartu"><h3>Data SPK</h3><div class="gr2">'+
-     inp('sNo','Nomor SPK *',s.noSPK,'SPK/MA2/2026/014')+
+   '<div class="kartu"><h3>Kepala SPK / FPK</h3><div class="gr2">'+
+     inp('sNo','No. FPK / SPK *',s.noSPK,'480/KPI48143/2026-S0')+
      '<div><label>Area *</label><select id="sArea"'+(baru&&boleh?'':' disabled')+'>'+S.master.area.map(function(a){ return '<option'+(a===s.area?' selected':'')+'>'+a+'</option>'; }).join('')+'</select></div>'+
-     inp('sTgl','Tanggal SPK',s.tglSPK,'','date')+
-     inp('sLokasi','Lokasi / plant',s.lokasi,'Plant 3A, BPP2')+
-     inp('sMulai','Mulai kerja',s.tglMulai,'','date')+
-     inp('sTarget','Target selesai',s.tglTarget,'','date')+
-     inp('sTM','Target pipa (meter lari)',s.targetM||'','120')+
-     inp('sTM2','Target dinding/HE (m²)',s.targetM2||'','0')+
-     inp('sOrg','Kebutuhan pekerja (orang)',s.targetPekerja||'','8')+
-     inp('sPengawas','Pengawas',s.pengawas,'Ladari')+
+     inp('sTgl','Tanggal FPK',s.tglSPK,'','date')+
+     inp('sKontrak','No. Kontrak / SP',s.noKontrak,'4650005097')+
+     '<div style="grid-column:1/-1"><label>Notifikasi / WO (boleh lebih dari satu, satu per baris)</label><textarea id="sWO" rows="2" placeholder="1102335301 (E-2-04 A-F)&#10;1102335302 (Box steam header)"'+(boleh?'':' disabled')+'>'+esc(s.noWO||'')+'</textarea></div>'+
+     inp('sIres','IRES No.',s.noIRES,'/REK/E15144/2026')+
+     inp('sLokasi','Plant / lokasi',s.lokasi,'Plant 3B')+
+     inp('sMulai','Durasi mulai',s.tglMulai,'','date')+
+     inp('sTarget','Durasi selesai',s.tglTarget,'','date')+
+     '<div style="grid-column:1/-1"><label>Uraian pekerjaan</label><textarea id="sUraian" rows="2" placeholder="Perbaikan isolasi pada Line Fuel Oil Battery Limit Plant 3B"'+(boleh?'':' disabled')+'>'+esc(s.uraian||'')+'</textarea></div>'+
+     inp('sPenerbit','Diterbitkan oleh',s.penerbit,'Section Head Maintenance Area 3')+
+     inp('sPengawasUser','Pengawas pihak user',s.pengawasUser,'Direksi MA3, SSIE, PE, HCC')+
+     inp('sPengawas','Pengawas BMKP',s.pengawas,'Roli')+
+     inp('sOrg','Kebutuhan pekerja (orang)',s.targetPekerja||'','6')+
      '<div><label>Status</label><select id="sStatus"'+(boleh?'':' disabled')+'>'+['Aktif','Selesai','Ditutup'].map(function(x){ return '<option'+(x===s.status?' selected':'')+'>'+x+'</option>'; }).join('')+'</select></div>'+
-     '<div style="grid-column:1/-1"><label>Lingkup pekerjaan</label><textarea id="sUraian" rows="2" placeholder="Bongkar pasang isolasi line steam di unit HCC sesuai daftar line terlampir"'+(boleh?'':' disabled')+'>'+esc(s.uraian||'')+'</textarea></div>'+
      '<div style="grid-column:1/-1"><label>Catatan</label><textarea id="sCatatan" rows="2"'+(boleh?'':' disabled')+'>'+esc(s.catatan||'')+'</textarea></div>'+
    '</div></div>'+
-   (baru ? '<div class="pesan info">Setelah SPK disimpan, buka lagi untuk memasang line ke SPK ini.</div>' :
-    '<div class="kartu"><h3>Line dalam SPK ini</h3><div id="sLine"><div class="kosong">Memuat…</div></div></div>')+
+   '<div class="kartu"><h3>Rincian pekerjaan</h3>'+
+     '<div class="mini" style="margin-bottom:8px">Satu baris = satu baris di tabel FPK. Untuk "10 m³ × 2 box" isi Volume 10, Jumlah 2, Satuan M3. '+
+     'Kolom <b>Line</b> (khusus pasang) menghubungkan rincian ke Line &amp; drawing supaya DWG terbit otomatis — ketik nomor line yang sudah ada, '+
+     'atau nomor baru untuk didaftarkan sekalian.</div>'+
+     '<div class="gulir"><table class="tabrinci" style="min-width:1240px"><thead><tr>'+
+       '<th style="width:58px">No</th><th style="width:160px">Kategori</th><th style="min-width:240px">Uraian pekerjaan</th>'+
+       '<th style="width:150px">Tag / objek</th><th style="width:92px">Ukuran (inci)</th><th style="width:86px">Volume</th>'+
+       '<th style="width:70px">× Jml</th><th style="width:84px">Satuan</th><th style="width:58px">Scope</th>'+
+       '<th style="width:170px">Line (pasang)</th><th style="width:110px">Progres</th><th style="width:44px"></th>'+
+     '</tr></thead><tbody id="itBody"></tbody></table></div>'+
+     (boleh ? '<div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap">'+
+       '<button class="btn a3 kecil" data-tambah="Persiapan">+ Persiapan izin</button>'+
+       '<button class="btn a3 kecil" data-tambah="Bongkar-pasang">+ Pipa (bongkar-pasang)</button>'+
+       '<button class="btn a3 kecil" data-tambah="Bongkar">+ Bongkar saja</button>'+
+       '<button class="btn a3 kecil" data-tambah="Pasang">+ Pasang saja</button>'+
+       '<button class="btn a3 kecil" data-tambah="Box">+ Box / equipment (m³)</button>'+
+       '<button class="btn a3 kecil" data-tambah="Fabrikasi">+ Fabrikasi</button>'+
+       '<button class="btn a3 kecil" data-tambah="GHK">+ GHK</button></div>' : '')+
+     '<datalist id="itLines"></datalist>'+
+   '</div>'+
+   (baru ? '' : '<div class="kartu"><h3>Line terhubung cara lama <span class="mini">(opsional, untuk area per line)</span></h3><div id="sLine"><div class="kosong">Memuat…</div></div></div>')+
    '<div class="tombol-bawah"><button class="btn a3" id="sKembali">Kembali</button>'+
      (boleh ? '<button class="btn" id="sSimpan">Simpan SPK</button>' : '')+'</div>';
+
   el('sKembali').onclick = function(){ buka('spk'); };
-  if(boleh) el('sSimpan').onclick = function(){
-    var data = { idSPK:s.idSPK||'', noSPK:el('sNo').value.trim(), area:el('sArea').value, tglSPK:el('sTgl').value,
-      lokasi:el('sLokasi').value, tglMulai:el('sMulai').value, tglTarget:el('sTarget').value,
-      targetM:el('sTM').value, targetM2:el('sTM2').value, targetPekerja:el('sOrg').value,
-      pengawas:el('sPengawas').value, status:el('sStatus').value, uraian:el('sUraian').value, catatan:el('sCatatan').value };
-    if(!data.noSPK){ kabar('Nomor SPK wajib diisi.','bad'); return; }
-    if(data.tglMulai && data.tglTarget && data.tglTarget < data.tglMulai){ kabar('Target selesai lebih awal dari tanggal mulai.','bad'); return; }
-    sibuk(true,'Menyimpan SPK...');
-    api('v4SpkSimpan',{spk:data}).then(function(j){
-      sibuk(false); kabar('SPK tersimpan.'); S.spkArea = data.area;
-      muatSPK().then(function(){ if(baru) formSpk(spkDari(j.idSPK)); else buka('spk'); });
-    }).catch(function(e){ sibuk(false); kabar(e.message,'bad'); });
-  };
+  if(el('sArea')) el('sArea').onchange = function(){ if(!el('sKontrak').value) el('sKontrak').value = kontrakArea(this.value); muatDaftarLineForm(this.value); };
+  gambarItem(boleh);
+  muatDaftarLineForm(s.area);
+  [].forEach.call(document.querySelectorAll('[data-tambah]'), function(b){
+    b.onclick = function(){
+      bacaItemForm();
+      var k = b.dataset.tambah, it = itemKosong(k==='Box'?'Bongkar-pasang':k);
+      if(k==='Box'){ it.uraian='Pembongkaran, fabrikasi, dan pemasangan isolasi box'; it.satuan='M3'; }
+      if(k==='Bongkar'){ it.uraian='Pembongkaran isolasi line'; }
+      if(k==='Pasang'){ it.uraian='Pemasangan isolasi line'; }
+      if(k==='Bongkar-pasang'){ it.uraian='Pembongkaran, fabrikasi, dan pemasangan isolasi line'; }
+      var iGhk = S.formItem.map(function(x){ return x.kategori; }).lastIndexOf('GHK');
+      if(k!=='GHK' && iGhk>=0) S.formItem.splice(iGhk, 0, it); else S.formItem.push(it);
+      gambarItem(boleh);
+    };
+  });
+  if(boleh) el('sSimpan').onclick = function(){ simpanSpkForm(s, baru); };
   if(!baru) muatLineSpk(s);
 }
 
+function muatDaftarLineForm(area){
+  if(!S.v4ok) return;
+  api('lineList',{area:area}).then(function(j){
+    S.formLines = j.data || [];
+    var dl = el('itLines'); if(!dl) return;
+    dl.innerHTML = S.formLines.map(function(L){ return '<option value="'+esc(L.noLine)+'">'+esc(L.ringkasUkuran ? String(L.ringkasUkuran).slice(0,40) : '')+'</option>'; }).join('');
+    gambarItem(S.peran!=='baca');
+  }).catch(function(){});
+}
+
+function gambarItem(boleh){
+  var b = el('itBody'); if(!b) return;
+  if(!S.formItem.length){ b.innerHTML = '<tr><td colspan="12" class="kosong">Belum ada rincian. Pakai tombol di bawah.</td></tr>'; return; }
+  var dis = boleh ? '' : ' disabled';
+  var terdaftar = {}; (S.formLines||[]).forEach(function(L){ terdaftar[String(L.noLine).trim().toUpperCase()] = 1; });
+  b.innerHTML = S.formItem.map(function(it, i){
+    var pasang = /pasang/i.test(it.kategori);
+    var ket = '';
+    if(pasang && it.noLineInput){
+      ket = terdaftar[String(it.noLineInput).trim().toUpperCase()] ? '<div class="mini" style="color:var(--hijau)">terdaftar</div>' : '<div class="mini" style="color:var(--kuning)">baru — didaftarkan saat simpan</div>';
+    }
+    var prog = it.idItem ? ('<b style="color:'+warnaPersen(it.pct)+'">'+(it.pct||0)+'%</b><div class="mini">'+(itemLs(it) ? esc(it.status||'belum') : f1(it.kum)+' / '+f1(it.total)+' '+satTeks(it.satuan))+'</div>') : '<span class="mini">—</span>';
+    return '<tr data-it="'+i+'">'+
+      '<td><input data-f="no" value="'+esc(it.no||'')+'" placeholder="'+(i+1)+'"'+dis+'></td>'+
+      '<td><select data-f="kategori"'+dis+'>'+KATEGORI_SPK.map(function(k){ return '<option'+(k===it.kategori?' selected':'')+'>'+k+'</option>'; }).join('')+'</select></td>'+
+      '<td><textarea data-f="uraian" rows="2" style="min-width:210px"'+dis+'>'+esc(it.uraian||'')+'</textarea></td>'+
+      '<td><input data-f="objek" value="'+esc(it.objek||'')+'" placeholder="'+(itemLs(it)?'':'G-3-09ABC')+'"'+dis+'></td>'+
+      '<td><select data-f="ukuran"'+dis+'>'+UKURAN_SPK.map(function(u){ return '<option value="'+u+'"'+(String(u)===String(it.ukuran||'')?' selected':'')+'>'+(u?u+'"':'—')+'</option>'; }).join('')+'</select></td>'+
+      '<td><input data-f="volume" class="angka" inputmode="decimal" value="'+esc(it.volume||'')+'" placeholder="'+(itemLs(it)?'':'10')+'"'+dis+'></td>'+
+      '<td><input data-f="jumlah" class="angka" inputmode="numeric" value="'+esc(it.jumlah||'')+'" placeholder="'+(itemLs(it)?'':'1')+'"'+dis+'></td>'+
+      '<td><select data-f="satuan"'+dis+'>'+SATUAN_SPK.map(function(u){ return '<option value="'+u+'"'+(u===it.satuan?' selected':'')+'>'+satTeks(u)+'</option>'; }).join('')+'</select></td>'+
+      '<td class="c"><input type="checkbox" data-f="inScope" style="width:auto"'+(it.inScope!==false?' checked':'')+dis+'></td>'+
+      '<td>'+(pasang ? '<input data-f="noLineInput" list="itLines" value="'+esc(it.noLineInput||'')+'" placeholder="nomor line"'+dis+'>'+ket : '<span class="mini">—</span>')+'</td>'+
+      '<td>'+prog+'</td>'+
+      '<td>'+(boleh?'<button class="btn a3 kecil" data-hapusit="'+i+'">×</button>':'')+'</td></tr>';
+  }).join('');
+  b.onchange = function(e){
+    if(e.target.dataset.f==='kategori' || e.target.dataset.f==='noLineInput'){ bacaItemForm(); gambarItem(boleh); }
+  };
+  b.onclick = function(e){
+    var h = e.target.closest('[data-hapusit]'); if(!h) return;
+    bacaItemForm();
+    var it = S.formItem[+h.dataset.hapusit];
+    if(it.idItem && n2(it.kum)>0 && !confirm('Rincian ini sudah punya progres. Tetap hapus?')) return;
+    S.formItem.splice(+h.dataset.hapusit, 1); gambarItem(boleh);
+  };
+}
+
+function bacaItemForm(){
+  [].forEach.call(document.querySelectorAll('#itBody tr[data-it]'), function(tr){
+    var it = S.formItem[+tr.dataset.it]; if(!it) return;
+    [].forEach.call(tr.querySelectorAll('[data-f]'), function(x){
+      it[x.dataset.f] = x.type==='checkbox' ? x.checked : x.value;
+    });
+  });
+}
+
+function itemUntukServer(area){
+  var peta = petaUkuranBOQ(area);
+  var terdaftar = {}; (S.formLines||[]).forEach(function(L){ terdaftar[String(L.noLine).trim().toUpperCase()] = L.idLine; });
+  return S.formItem.filter(function(it){ return String(it.uraian||'').trim() || n2(it.volume); }).map(function(it){
+    var pasang = /pasang/i.test(it.kategori);
+    var kode = it.kodeBOQ || '';
+    if(!kode && pasang && it.ukuran && /^m$/i.test(it.satuan||'')){ var b = peta[ukuranAngka(it.ukuran)]; if(b) kode = b.kode; }
+    var o = { idItem: it.idItem || '', no: it.no||'', kategori: it.kategori, uraian: it.uraian||'', objek: it.objek||'',
+      ukuran: it.ukuran||'', volume: it.volume, jumlah: it.jumlah, satuan: it.satuan||'', inScope: it.inScope!==false, kodeBOQ: kode, idLine:'' };
+    var nl = String(it.noLineInput||'').trim();
+    if(pasang && nl){
+      var id = terdaftar[nl.toUpperCase()];
+      if(id) o.idLine = id; else o.noLineBaru = nl;
+    }
+    return o;
+  });
+}
+
+function simpanSpkForm(s, baru){
+  bacaItemForm();
+  var area = el('sArea').value;
+  var data = { idSPK:s.idSPK||'', noSPK:el('sNo').value.trim(), area:area, tglSPK:el('sTgl').value,
+    noKontrak:el('sKontrak').value.trim(), noWO:el('sWO').value.trim(), noIRES:el('sIres').value.trim(),
+    lokasi:el('sLokasi').value, tglMulai:el('sMulai').value, tglTarget:el('sTarget').value,
+    uraian:el('sUraian').value, penerbit:el('sPenerbit').value, pengawasUser:el('sPengawasUser').value,
+    pengawas:el('sPengawas').value, targetPekerja:el('sOrg').value, status:el('sStatus').value, catatan:el('sCatatan').value,
+    targetM: s.targetM || '', targetM2: s.targetM2 || '' };
+  if(!data.noSPK){ kabar('Nomor FPK / SPK wajib diisi.','bad'); return; }
+  if(data.tglMulai && data.tglTarget && data.tglTarget < data.tglMulai){ kabar('Tanggal selesai lebih awal dari tanggal mulai.','bad'); return; }
+  data.item = itemUntukServer(area);
+  var kosong = data.item.filter(function(it){ return !/ls/i.test(it.satuan) && !n2(it.volume); });
+  if(kosong.length && !confirm(kosong.length+' rincian belum diisi volumenya. Tetap simpan?')) return;
+  sibuk(true,'Menyimpan SPK...');
+  api('v4SpkSimpan',{spk:data}).then(function(j){
+    sibuk(false); kabar('SPK tersimpan.'); S.spkArea = area;
+    muatSPK().then(function(){ formSpk(spkDari(j.idSPK)); });
+  }).catch(function(e){ sibuk(false); kabar(e.message,'bad'); });
+}
+
+/* ─────────── line terhubung cara lama (LineSPK) ─────────── */
 function muatLineSpk(s){
+  if(!el('sLine')) return;
   Promise.all([api('lineList',{area:s.area}), api('v4LineSpkMap',{area:s.area})]).then(function(r){
     S.spkLines = r[0].data || []; S.spkPeta = r[1].peta || {};
     gambarLineSpk(s);
@@ -2109,56 +2416,30 @@ function gambarLineSpk(s){
   var boleh = S.peran!=='baca';
   var dalam = S.spkLines.filter(function(L){ return S.spkPeta[L.idLine]===s.idSPK; });
   var bebas = S.spkLines.filter(function(L){ return !S.spkPeta[L.idLine]; });
-  var lain  = S.spkLines.length - dalam.length - bebas.length;
-  function pipa(L){ return n2(L.totalM2) <= n2(L.panjangTotal); }
-  var vol = dalam.filter(pipa).reduce(function(m,L){ return m + n2(L.panjangTotal); },0);
-  var psg = dalam.filter(pipa).reduce(function(m,L){ return m + n2(L.terpasang); },0);
-
   el('sLine').innerHTML =
-   '<div class="gr2" style="margin-bottom:10px">'+
-     '<div class="stat"><b>'+dalam.length+'</b><span>line di SPK ini</span></div>'+
-     '<div class="stat"><b>'+f1(psg)+' / '+f1(vol)+'</b><span>pipa terpasang / volume (m)</span></div>'+
-     '<div class="stat"><b>'+bebas.length+'</b><span>line '+esc(s.area)+' belum ber-SPK</span></div>'+
-     '<div class="stat"><b>'+lain+'</b><span>line di SPK lain</span></div>'+
-   '</div>'+
-   (dalam.length ? '<div class="gulir" style="max-height:40vh"><table><thead><tr><th>No line</th><th>Ukuran</th><th style="width:90px">Volume</th><th style="width:90px">Terpasang</th><th style="width:70px"></th></tr></thead><tbody>'+
+   '<div class="mini" style="margin-bottom:8px">Dipakai bila area ini masih input per line: line yang dicentang di sini ditampilkan saat SPK ini dipilih di Input harian. '+
+   'Untuk SPK yang memakai rincian di atas, bagian ini boleh dikosongkan.</div>'+
+   (dalam.length ? '<div class="gulir" style="max-height:30vh"><table><thead><tr><th>No line</th><th style="width:90px">Volume</th><th style="width:90px">Terpasang</th><th style="width:70px"></th></tr></thead><tbody>'+
      dalam.map(function(L){
-       return '<tr><td><b>'+esc(L.noLine)+'</b><div class="mini">'+esc(L.noDWG||'')+'</div></td><td class="mini">'+esc(L.ringkasUkuran||'')+'</td>'+
+       return '<tr><td><b>'+esc(L.noLine)+'</b><div class="mini">'+esc(L.noDWG||'')+'</div></td>'+
          '<td class="angka">'+f1(n2(L.panjangTotal)+n2(L.totalM2))+'</td><td class="angka">'+f1(L.terpasang)+'</td>'+
          '<td>'+(boleh?'<button class="btn a3 kecil" data-lepas="'+esc(L.idLine)+'">Lepas</button>':'')+'</td></tr>';
-     }).join('')+'</tbody></table></div>' : '<div class="kosong">Belum ada line di SPK ini.</div>')+
-   (boleh ? '<h3 style="margin-top:16px">Pasang line ke SPK ini</h3>'+
-     '<div class="baris"><div style="flex:2 1 260px"><input id="slCari" placeholder="Saring nomor line, misal 202-P-00"></div>'+
-     '<div style="flex:0 0 auto"><label style="display:flex;gap:6px;align-items:center;font-weight:400;margin:0"><input type="checkbox" id="slLain" style="width:auto"> tampilkan juga line SPK lain</label></div></div>'+
-     '<div class="gulir" style="max-height:40vh;margin-top:8px"><table><thead><tr><th style="width:40px"><input type="checkbox" id="slSemua" style="width:auto"></th><th>No line</th><th>Ukuran</th><th style="width:90px">Volume</th><th style="width:120px">SPK sekarang</th></tr></thead><tbody id="slBody"></tbody></table></div>'+
-     '<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn kecil" id="slPasang">Pasang yang dicentang</button>'+
-     '<span class="mini" id="slJml"></span></div>' : '');
-
+     }).join('')+'</tbody></table></div>' : '<div class="kosong">Belum ada line terhubung.</div>')+
+   (boleh ? '<details style="margin-top:10px"><summary style="cursor:pointer;font-weight:600">Pasang line ke SPK ini ('+bebas.length+' line belum ber-SPK)</summary>'+
+     '<div class="baris" style="margin-top:8px"><div style="flex:2 1 260px"><input id="slCari" placeholder="Saring nomor line, misal 202-P-00"></div></div>'+
+     '<div class="gulir" style="max-height:35vh;margin-top:8px"><table><thead><tr><th style="width:40px"><input type="checkbox" id="slSemua" style="width:auto"></th><th>No line</th><th style="width:90px">Volume</th></tr></thead><tbody id="slBody"></tbody></table></div>'+
+     '<div style="margin-top:10px"><button class="btn kecil" id="slPasang">Pasang yang dicentang</button></div></details>' : '');
   function daftar(){
-    var t = (el('slCari').value||'').trim().toUpperCase(), semua = el('slLain').checked;
-    var d = S.spkLines.filter(function(L){
-      var k = S.spkPeta[L.idLine];
-      if(k===s.idSPK) return false;
-      if(k && !semua) return false;
-      return !t || String(L.noLine).toUpperCase().indexOf(t)>=0;
-    });
-    el('slBody').innerHTML = d.slice(0,500).map(function(L){
-      var k = S.spkPeta[L.idLine];
-      return '<tr><td><input type="checkbox" data-pilih="'+esc(L.idLine)+'" style="width:auto"></td><td>'+esc(L.noLine)+'</td>'+
-        '<td class="mini">'+esc(L.ringkasUkuran||'')+'</td><td class="angka">'+f1(n2(L.panjangTotal)+n2(L.totalM2))+'</td>'+
-        '<td class="mini">'+(k?esc(namaSpk(k)):'—')+'</td></tr>';
-    }).join('') || '<tr><td colspan="5" class="kosong">Tidak ada line yang cocok.</td></tr>';
-    el('slJml').textContent = d.length + ' line ditampilkan' + (d.length>500?' (500 pertama)':'');
+    var t = (el('slCari').value||'').trim().toUpperCase();
+    el('slBody').innerHTML = bebas.filter(function(L){ return !t || String(L.noLine).toUpperCase().indexOf(t)>=0; }).slice(0,500).map(function(L){
+      return '<tr><td><input type="checkbox" data-pilih="'+esc(L.idLine)+'" style="width:auto"></td><td>'+esc(L.noLine)+'</td><td class="angka">'+f1(n2(L.panjangTotal)+n2(L.totalM2))+'</td></tr>';
+    }).join('') || '<tr><td colspan="3" class="kosong">Tidak ada line yang cocok.</td></tr>';
   }
   if(boleh){
-    el('slCari').oninput = daftar; el('slLain').onchange = daftar;
-    el('slSemua').onchange = function(){
-      var c = this.checked;
-      [].forEach.call(document.querySelectorAll('[data-pilih]'), function(x){ x.checked = c; });
-    };
+    el('slCari').oninput = daftar;
+    el('slSemua').onchange = function(){ var c = this.checked; [].forEach.call(document.querySelectorAll('[data-pilih]'), function(x){ x.checked = c; }); };
     el('slPasang').onclick = function(){
-      var ids = [].filter.call(document.querySelectorAll('[data-pilih]'), function(x){ return x.checked; })
-        .map(function(x){ return x.dataset.pilih; });
+      var ids = [].filter.call(document.querySelectorAll('[data-pilih]'), function(x){ return x.checked; }).map(function(x){ return x.dataset.pilih; });
       if(!ids.length){ kabar('Centang dulu line yang mau dipasang.','info'); return; }
       pasangLine(s, ids, '');
     };
@@ -2176,6 +2457,90 @@ function pasangLine(s, ids, mode){
     sibuk(false); kabar(j.jumlah+' line '+(mode==='lepas'?'dilepas dari':'dipasang ke')+' SPK '+s.noSPK+'.');
     muatSPK().then(function(){ muatLineSpk(spkDari(s.idSPK)||s); });
   }).catch(function(e){ sibuk(false); kabar(e.message,'bad'); });
+}
+
+/* ─────────── 6 FPK MA3 (28 Sep 2026) — sekali klik ─────────── */
+var FPK_SEP2026 = (function(){
+  var umum = { noKontrak:'4650005097', tglMulai:'2026-09-28', status:'Aktif',
+    penerbit:'Section Head Maintenance Area 3 — Yulian Sandy Mangentan' };
+  var P = {kategori:'Persiapan', uraian:'Persiapan Izin Kerja (JSA & SIKA)', satuan:'Ls'};
+  var G = {kategori:'GHK', uraian:'GHK area kerja setiap hari setelah pembongkaran dan pemasangan isolasi', satuan:'Ls'};
+  function x(o, it){ return Object.assign({}, umum, o, {item: it}); }
+  return [
+    x({noSPK:'473/KPI48143/2026-S0', tglSPK:'2026-09-22', tglTarget:'2026-10-12', noWO:'1102335236', noIRES:'',
+       uraian:'Pekerjaan pembongkaran isolasi line supply TCW dari Pompa G-32-04 A dan B menuju Piperack sepanjang ±125 m',
+       lokasi:'Pompa G-32-04 A/B – Piperack', pengawasUser:'Direksi Maintenance Area 3, SSIE, HCC'},
+      [Object.assign({no:'1'},P), {no:'2', kategori:'Bongkar', uraian:'Pembongkaran isolasi line supply TCW', objek:'Line supply TCW', volume:125, satuan:'M'},
+       Object.assign({no:'3'},G, {uraian:'Pekerjaan GHK'})]),
+    x({noSPK:'481/KPI48143/2026-S0', tglSPK:'2026-09-24', tglTarget:'2026-10-09', noWO:'1102335292 (Steam Box Plant 8A)', noIRES:'',
+       uraian:'Perbaikan isolasi pada steam box Plant 8A', lokasi:'Plant 8A', pengawasUser:'Direksi MA3, SSIE, PE, HCC'},
+      [Object.assign({no:'1'},P), {no:'2', kategori:'Bongkar-pasang', uraian:'Pembongkaran, fabrikasi, dan pemasangan cover steam box', objek:'Steam box Plant 8A', volume:2, satuan:'M3'},
+       Object.assign({no:'3'},G)]),
+    x({noSPK:'480/KPI48143/2026-S0', tglSPK:'2026-09-24', tglTarget:'2026-10-09', noWO:'1102334769 (Fuel Oil Battery Limit)', noIRES:'',
+       uraian:'Perbaikan isolasi pada Line Fuel Oil Battery Limit Plant 3B', lokasi:'Plant 3B', pengawasUser:'Direksi MA3, SSIE, PE, HCC'},
+      [Object.assign({no:'1'},P),
+       {no:'2', kategori:'Bongkar-pasang', uraian:'Pembongkaran, fabrikasi, dan pemasangan isolasi line fuel oil', objek:'Line Fuel Oil BL', ukuran:'6', volume:2, satuan:'M'},
+       {no:'3', kategori:'Bongkar-pasang', uraian:'Pembongkaran, fabrikasi, dan pemasangan isolasi line fuel oil', objek:'Line Fuel Oil BL', ukuran:'8', volume:10, satuan:'M'},
+       {no:'4', kategori:'Bongkar-pasang', uraian:'Pembongkaran, fabrikasi, dan pemasangan isolasi line fuel oil', objek:'Line Fuel Oil BL', ukuran:'12', volume:6, satuan:'M'},
+       {no:'5', kategori:'Bongkar-pasang', uraian:'Pembongkaran, fabrikasi, dan pemasangan isolasi line fuel oil', objek:'Line Fuel Oil BL', ukuran:'14', volume:15, satuan:'M'},
+       Object.assign({no:'6'},G)]),
+    x({noSPK:'479/KPI48143/2026-S0', tglSPK:'2026-09-24', tglTarget:'2026-10-09', noWO:'1102335303 (G-3-09ABC & GTH-3-01B)', noIRES:'',
+       uraian:'Perbaikan isolasi pada line suction & discharge G-3-09ABC dan line 6" GTH-3-01B, Program Inspeksi CUI SSIE Plant 3C',
+       lokasi:'Plant 3C', pengawasUser:'Direksi MA3, SSIE, PE, HCC'},
+      [Object.assign({no:'1'},P),
+       {no:'2', kategori:'Bongkar-pasang', uraian:'Pembongkaran, fabrikasi, dan pemasangan isolasi line suction dan discharge', objek:'G-3-09 ABC', ukuran:'8', volume:35, satuan:'M'},
+       {no:'6', kategori:'Bongkar-pasang', uraian:'Pembongkaran, fabrikasi, dan pemasangan isolasi line', objek:'GTH-3-01B', ukuran:'6', volume:6, satuan:'M'},
+       Object.assign({no:'7'},G)]),
+    x({noSPK:'478/KPI48143/2026-S0', tglSPK:'2026-09-24', tglTarget:'2026-10-09', noWO:'1102335292 (Box steam header C-8-14A)', noIRES:'/REK/E15144/2026',
+       uraian:'Perbaikan isolasi pada box steam header C-8-14A Plant 8A', lokasi:'Plant 8A', pengawasUser:'Direksi MA3, SSIE, PE, HCC'},
+      [Object.assign({no:'1'},P),
+       {no:'2', kategori:'Bongkar', uraian:'Pembongkaran isolasi box steam header', objek:'C-8-14A', volume:10, jumlah:2, satuan:'M3'},
+       {no:'3', kategori:'Fabrikasi', uraian:'Fabrikasi isolasi yang akan dilakukan perbaikan', satuan:'Ls'},
+       {no:'4', kategori:'Pasang', uraian:'Pemasangan isolasi box steam header', objek:'C-8-14A', volume:10, jumlah:2, satuan:'M3'},
+       Object.assign({no:'5'},G)]),
+    x({noSPK:'477/KPI48143/2026-S0', tglSPK:'2026-09-24', tglTarget:'2026-10-09',
+       noWO:'1102335301 (E-2-04 A-F)\n1102335302 (Box steam header)', noIRES:'/REK/E15144/2026',
+       uraian:'Perbaikan isolasi pada line inlet channel dan shell E-2-04 A s/d F serta box steam header B/L Plant 2',
+       lokasi:'Plant 2', pengawasUser:'Direksi MA3, SSIE, PE, HCC'},
+      [Object.assign({no:'1'},P),
+       {no:'2', kategori:'Bongkar', uraian:'Pembongkaran isolasi line inlet channel', objek:'E-2-04 A s/d F', volume:25, satuan:'M'},
+       {no:'2', kategori:'Bongkar', uraian:'Pembongkaran isolasi shell', objek:'E-2-04 A s/d F', volume:20, satuan:'M'},
+       {no:'3', kategori:'Bongkar', uraian:'Pembongkaran isolasi box steam header', objek:'Box steam header B/L', volume:10, jumlah:4, satuan:'M3'},
+       {no:'4', kategori:'Fabrikasi', uraian:'Fabrikasi isolasi yang akan dilakukan perbaikan', satuan:'Ls'},
+       {no:'5', kategori:'Pasang', uraian:'Pemasangan isolasi line inlet channel', objek:'E-2-04 A s/d F', volume:25, satuan:'M'},
+       {no:'5', kategori:'Pasang', uraian:'Pemasangan isolasi shell', objek:'E-2-04 A s/d F', volume:20, satuan:'M'},
+       {no:'6', kategori:'Pasang', uraian:'Pemasangan isolasi box steam header', objek:'Box steam header B/L', volume:10, jumlah:4, satuan:'M3'},
+       Object.assign({no:'7'},G)])
+  ];
+})();
+
+function kartuFpkContoh(){
+  var k = el('spFpk'); if(!k) return;
+  if(S.peran==='baca' || !S.v4ok){ k.innerHTML=''; return; }
+  var ada = {}; S.spk.forEach(function(s){ ada[String(s.noSPK).trim().toUpperCase()] = 1; });
+  var belum = FPK_SEP2026.filter(function(f){ return !ada[f.noSPK.toUpperCase()]; });
+  if(!belum.length){ k.innerHTML=''; return; }
+  k.innerHTML = '<div class="kartu" style="border-left:5px solid var(--emas)"><h3>FPK kontrak 4650005097 belum terdaftar ('+belum.length+')</h3>'+
+    '<div class="mini">'+belum.map(function(f){ return '<b>'+esc(f.noSPK.split('/')[0])+'</b> '+esc(f.uraian.slice(0,60)); }).join('<br>')+'</div>'+
+    '<div class="baris" style="margin-top:10px"><div style="flex:0 0 160px"><label>Masuk ke area</label><select id="fpkArea">'+
+      S.master.area.map(function(a){ return '<option'+(a==='MA3'?' selected':'')+'>'+a+'</option>'; }).join('')+'</select></div>'+
+    '<div style="flex:0 0 auto"><button class="btn" id="fpkMasuk">Daftarkan '+belum.length+' FPK sekaligus</button></div></div>'+
+    '<div class="mini" style="margin-top:6px">Sudah diketik sesuai lembar FPK tanggal 22–24 Sep 2026 (durasi mulai 28 Sep 2026). Periksa ulang lalu ubah bila ada yang beda.</div></div>';
+  el('fpkMasuk').onclick = function(){
+    var area = el('fpkArea').value, i = 0;
+    var peta = petaUkuranBOQ(area);
+    function lanjut(){
+      if(i >= belum.length){ sibuk(false); kabar(belum.length+' FPK terdaftar di '+area+'.'); S.spkArea = area; muatSPK().then(function(){ gambarSpk(); kartuFpkContoh(); }); return; }
+      var f = JSON.parse(JSON.stringify(belum[i])); f.area = area;
+      f.item.forEach(function(it){
+        if(/pasang/i.test(it.kategori) && it.ukuran && it.satuan==='M'){ var b = peta[ukuranAngka(it.ukuran)]; if(b) it.kodeBOQ = b.kode; }
+      });
+      sibuk(true, 'Mendaftarkan FPK '+(i+1)+' dari '+belum.length+'…');
+      api('v4SpkSimpan',{spk:f}).then(function(){ i++; lanjut(); })
+        .catch(function(e){ sibuk(false); kabar('Berhenti di '+f.noSPK+': '+e.message,'bad'); muatSPK().then(gambarSpk); });
+    }
+    lanjut();
+  };
 }
 
 /* ═══════════════════ DASHBOARD LAPORAN HARIAN ═══════════════════ */
@@ -2246,7 +2611,7 @@ function hitungDsb(J, buckets){
   buckets.forEach(function(b){
     A[b] = {};
     areas.forEach(function(a){
-      A[b][a] = { rM:0, aM:0, rM2:0, aM2:0, orgRencana:0, manual:0, finger:0, keb:0,
+      A[b][a] = { rM:0, aM:0, rM2:0, aM2:0, rM3:0, aM3:0, aB:0, orgRencana:0, manual:0, finger:0, keb:0,
                   lap:0, foto:0, hariKerja:{}, hariFinger:{} };
     });
   });
@@ -2258,6 +2623,20 @@ function hitungDsb(J, buckets){
     if(adalahM2(p.sat, L)) c.aM2 += p.v; else c.aM += p.v;
     c.hariKerja[p.t] = 1;
     if(p.h && (!S.dsb.area || p.a===S.dsb.area)) hambat[p.h] = (hambat[p.h]||0)+1;
+  });
+  // progres per rincian SPK: yang terhubung ke line sudah terhitung lewat progres line
+  (J.progresSpk||[]).forEach(function(r){
+    var c = sel(r.t, r.a); if(!c) return;
+    var sat = String(r.sat||'').toLowerCase(), pasang = /pasang/i.test(r.kat);
+    var kunci = /m3|m³/.test(sat) ? '3' : (/m2|m²/.test(sat) ? '2' : (/^m$/.test(sat) ? '1' : ''));
+    if(r.v || r.st) c.hariKerja[r.t] = 1;
+    if(r.h && (!S.dsb.area || r.a===S.dsb.area)) hambat[r.h] = (hambat[r.h]||0)+1;
+    if(!kunci) return;
+    if(pasang){
+      if(kunci==='1'){ c.rM += r.tg; if(!r.link) c.aM += r.v; }
+      if(kunci==='2'){ c.rM2 += r.tg; if(!r.link) c.aM2 += r.v; }
+      if(kunci==='3'){ c.rM3 += r.tg; c.aM3 += r.v; }
+    } else if(/bongkar/i.test(r.kat) && kunci==='1') c.aB += r.v;
   });
   J.rencana.forEach(function(r){
     var c = sel(r.t, r.a); if(!c) return;
@@ -2279,7 +2658,7 @@ function hitungDsb(J, buckets){
 }
 
 function jumlahArea(sel, areas){
-  var t = { rM:0, aM:0, rM2:0, aM2:0, manual:0, finger:0, keb:0, lap:0, foto:0, nHari:0 };
+  var t = { rM:0, aM:0, rM2:0, aM2:0, rM3:0, aM3:0, aB:0, manual:0, finger:0, keb:0, lap:0, foto:0, nHari:0 };
   areas.forEach(function(a){ var c = sel[a]; Object.keys(t).forEach(function(k){ t[k] += c[k]||0; }); });
   return t;
 }
@@ -2294,6 +2673,8 @@ function olahDashboard(){
   var namaPer = labelBucket(kini);
   var namaLalu = lalu ? labelBucket(lalu) : '';
   var adaM2 = buckets.some(function(b){ return areas.some(function(a){ return H.A[b][a].aM2 || H.A[b][a].rM2; }); });
+  var adaM3 = buckets.some(function(b){ return areas.some(function(a){ return H.A[b][a].aM3 || H.A[b][a].rM3; }); });
+  var adaB = buckets.some(function(b){ return areas.some(function(a){ return H.A[b][a].aB; }); });
 
   function delta(kini, lalu, sat){
     if(lalu===null || lalu===undefined) return '';
@@ -2307,6 +2688,8 @@ function olahDashboard(){
     '<div class="k k1"><span>Pipa terpasang '+namaPer+'</span><b>'+f1(T.aM)+' m</b>'+delta(T.aM, TL&&TL.aM, ' m')+'</div>'+
     '<div class="k k2"><span>Capaian vs rencana</span><b style="color:'+warnaPersen(pM)+'">'+teksPersen(pM)+'</b><small>rencana '+f1(T.rM)+' m</small></div>'+
     (adaM2 ? '<div class="k k3"><span>Dinding &amp; HE '+namaPer+'</span><b>'+f1(T.aM2)+' m²</b>'+delta(T.aM2, TL&&TL.aM2, ' m²')+'</div>' : '')+
+    (adaM3 ? '<div class="k k3"><span>Box / equipment '+namaPer+'</span><b>'+f1(T.aM3)+' m³</b>'+delta(T.aM3, TL&&TL.aM3, ' m³')+'</div>' : '')+
+    (adaB ? '<div class="k k2"><span>Bongkar saja '+namaPer+'</span><b>'+f1(T.aB)+' m</b><small>pembongkaran tanpa pasang</small></div>' : '')+
     '<div class="k k4"><span>Kehadiran (manual)</span><b>'+T.manual+'</b><small>'+(T.keb?'kebutuhan SPK '+T.keb+' · '+teksPersen(pAbs):'kebutuhan SPK belum diisi')+'</small></div>'+
     '<div class="k k5"><span>Kehadiran (finger)</span><b>'+T.finger+'</b><small>'+(T.finger? 'selisih '+(T.manual-T.finger)+' dari manual' : 'finger belum diunggah')+'</small></div>'+
     '<div class="k k6"><span>Laporan &amp; foto</span><b>'+T.lap+' · '+T.foto+'</b><small>laporan · foto (target '+targetFoto+' foto)</small></div>'+
@@ -2318,10 +2701,12 @@ function olahDashboard(){
     var spkA = S.spk.filter(function(s){ return s.area===a && s.status==='Aktif'; });
     return '<div class="kartuarea" style="border-top:5px solid '+warnaArea(a,i)+'">'+
       '<div style="display:flex;justify-content:space-between;align-items:baseline"><b style="font-size:16px">'+esc(a)+'</b>'+
-        '<span class="mini">'+spkA.length+' SPK aktif</span></div>'+
+        '<span class="mini">'+spkA.length+' SPK aktif · '+(modeArea(a)==='SPK'?'mode SPK':'per line')+'</span></div>'+
       '<div class="mini">'+esc(NAMA_AREA[a]||'')+'</div>'+
       '<div style="margin-top:8px"><span class="mini">Pipa</span> <b>'+f1(c.aM)+'</b> / '+f1(c.rM)+' m <b style="color:'+warnaPersen(p)+'">'+teksPersen(p)+'</b>'+batang(p, warnaArea(a,i))+'</div>'+
       (c.aM2||c.rM2 ? '<div style="margin-top:6px"><span class="mini">Dinding/HE</span> <b>'+f1(c.aM2)+'</b> / '+f1(c.rM2)+' m²</div>' : '')+
+      (c.aM3||c.rM3 ? '<div style="margin-top:6px"><span class="mini">Box</span> <b>'+f1(c.aM3)+'</b> / '+f1(c.rM3)+' m³</div>' : '')+
+      (c.aB ? '<div style="margin-top:6px"><span class="mini">Bongkar saja</span> <b>'+f1(c.aB)+'</b> m</div>' : '')+
       '<div class="tiga">'+
         '<div><b>'+c.manual+'</b><span>hadir manual</span></div>'+
         '<div><b>'+(c.finger||'—')+'</b><span>finger</span></div>'+
@@ -2339,12 +2724,14 @@ function olahDashboard(){
       '<td class="angka" style="color:'+(t.aM-t.rM<0?'var(--merah)':'var(--hijau)')+'">'+(t.aM-t.rM>=0?'+':'')+f1(t.aM-t.rM)+'</td>'+
       '<td class="angka" style="color:'+warnaPersen(p)+'">'+teksPersen(p)+'</td>'+
       (adaM2?'<td class="angka">'+f1(t.aM2)+'</td>':'')+
+      (adaM3?'<td class="angka">'+f1(t.aM3)+'</td>':'')+
+      (adaB?'<td class="angka">'+f1(t.aB)+'</td>':'')+
       '<td class="angka">'+t.manual+'</td><td class="angka">'+(t.finger||'—')+'</td><td class="angka">'+(t.keb||'—')+'</td>'+
       '<td class="angka">'+t.lap+'</td><td class="angka">'+t.foto+'</td></tr>';
   }).join('');
   var tabel = '<div class="kartu"><h3>Rekap '+D.per+(D.area?' — '+esc(D.area):' — semua area')+'</h3>'+
     '<div class="gulir" style="max-height:60vh"><table><thead><tr><th>Periode</th><th class="angka">Rencana m</th><th class="angka">Aktual m</th>'+
-    '<th class="angka">Deviasi</th><th class="angka">Capaian</th>'+(adaM2?'<th class="angka">Aktual m²</th>':'')+
+    '<th class="angka">Deviasi</th><th class="angka">Capaian</th>'+(adaM2?'<th class="angka">Aktual m²</th>':'')+(adaM3?'<th class="angka">Box m³</th>':'')+(adaB?'<th class="angka">Bongkar m</th>':'')+
     '<th class="angka">Hadir manual</th><th class="angka">Finger</th><th class="angka">Kebutuhan</th><th class="angka">Laporan</th><th class="angka">Foto</th></tr></thead>'+
     '<tbody>'+baris+'</tbody></table></div>'+
     '<div class="mini" style="margin-top:6px">Kehadiran dalam orang-hari. Kebutuhan = jumlah pekerja yang diminta SPK aktif, dihitung pada hari kerja yang tercatat. Meter lari dan m² tidak dijumlahkan.</div></div>';
@@ -2352,14 +2739,13 @@ function olahDashboard(){
   // tabel SPK
   var spkD = S.spk.filter(function(s){ return (!D.area || s.area===D.area) && s.status==='Aktif'; });
   var tSpk = '<div class="kartu"><h3>Capaian SPK aktif</h3>'+(spkD.length ?
-    '<div class="gulir"><table><thead><tr><th>No SPK</th><th>Area</th><th class="angka">Target m</th><th class="angka">Terpasang</th><th style="width:150px">Capaian</th><th>Target selesai</th><th class="angka">Line</th></tr></thead><tbody>'+
+    '<div class="gulir"><table><thead><tr><th>No SPK / FPK</th><th>Area</th><th style="min-width:200px">Rincian (terpasang / volume)</th><th style="width:150px">Capaian</th><th>Durasi</th></tr></thead><tbody>'+
     spkD.map(function(s){
-      var tgt = s.targetM||s.volLineM, p = persen(s.terpasangM, tgt), sisa = s.tglTarget ? selisihTgl(D.acuan, s.tglTarget) : null;
-      return '<tr><td><b>'+esc(s.noSPK)+'</b><div class="mini">'+esc(String(s.uraian||'').slice(0,60))+'</div></td><td>'+esc(s.area)+'</td>'+
-        '<td class="angka">'+f1(tgt)+'</td><td class="angka">'+f1(s.terpasangM)+'</td>'+
+      var p = s.persen, sisa = s.tglTarget ? selisihTgl(D.acuan, s.tglTarget) : null;
+      return '<tr><td><b>'+esc(s.noSPK)+'</b><div class="mini">'+esc(String(s.uraian||'').slice(0,70))+'</div></td><td>'+esc(s.area)+'</td>'+
+        '<td class="mini">'+esc(ringkasTeks(s))+'</td>'+
         '<td><b style="color:'+warnaPersen(p)+'">'+teksPersen(p)+'</b>'+batang(p, warnaArea(s.area))+'</td>'+
-        '<td class="mini">'+tglIndo(s.tglTarget)+(sisa!==null?'<br><b style="color:'+(sisa<0&&(p===null||p<100)?'var(--merah)':'var(--arang)')+'">'+(sisa<0?'lewat '+(-sisa)+' hr':'sisa '+sisa+' hr')+'</b>':'')+'</td>'+
-        '<td class="angka">'+s.lineSelesai+'/'+s.jmlLine+'</td></tr>';
+        '<td class="mini">'+tglIndo(s.tglMulai)+' – '+tglIndo(s.tglTarget)+(sisa!==null?'<br><b style="color:'+(sisa<0&&(p===null||p<100)?'var(--merah)':'var(--arang)')+'">'+(sisa<0?'lewat '+(-sisa)+' hr':'sisa '+sisa+' hr')+'</b>':'')+'</td></tr>';
     }).join('')+'</tbody></table></div>' : '<div class="kosong">Belum ada SPK aktif. Daftarkan di menu SPK.</div>')+'</div>';
 
   // kepatuhan 7 hari terakhir
@@ -2370,7 +2756,7 @@ function olahDashboard(){
     areas.map(function(a){
       return '<tr><td><b>'+esc(a)+'</b></td>'+tujuh.map(function(t){
         var lap = adaDi(J.laporan,t,a).length, ft = adaDi(J.foto,t,a).length, mn = adaDi(J.manual,t,a).length,
-            fg = adaDi(J.finger,t,a).length, pr = adaDi(J.progres,t,a).length;
+            fg = adaDi(J.finger,t,a).length, pr = adaDi(J.progres,t,a).length + adaDi(J.progresSpk||[],t,a).length;
         var minggu = tglObj(t).getDay()===0 && !lap && !pr && !mn;
         if(minggu) return '<td class="c mini" style="background:#F1F0EE">libur?</td>';
         var skor = (lap?1:0)+(ft?1:0)+(mn?1:0)+(pr?1:0);
@@ -3019,7 +3405,7 @@ function pgPengguna(){
    ═════════════════════════════════════════════════════════════════════ */
 
 var APP_VERSI = '4.0';
-var CODEGS_VERSI = '4.1';   // server satu berkas: Server_Insulation_BMKP_V4.gs
+var CODEGS_VERSI = '4.2';   // server satu berkas: Server_Insulation_BMKP_V4.gs
 var HADIR_JEDA = 60000;        // kirim kabar "saya sedang membuka" tiap 60 detik
 var _hadirTimer = null;
 
@@ -3116,7 +3502,7 @@ function pgSinkron(){
   };
   if(bolehUbah && el('skSimpanUrl')) el('skSimpanUrl').onclick = function(){
     S.url = el('skUrl').value.trim();
-    localStorage.setItem('ins_url_v4', S.url);
+    localStorage.setItem('ins_url_v42', S.url);
     el('skUrlPesan').innerHTML = '<div class="pesan ok">Alamat server disimpan di perangkat ini.</div>';
   };
 
@@ -3260,7 +3646,7 @@ function pgSetelan(){
     }).catch(function(e){ sibuk(false); kabar(e.message,'bad'); });
   };
   el('sSimpanUrl').onclick = function(){
-    S.url = el('sUrl').value.trim(); localStorage.setItem('ins_url_v4', S.url); kabar('Alamat server disimpan.');
+    S.url = el('sUrl').value.trim(); localStorage.setItem('ins_url_v42', S.url); kabar('Alamat server disimpan.');
   };
   el('sUji').onclick = function(){
     sibuk(true,'Menguji...');
