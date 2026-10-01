@@ -883,7 +883,7 @@ function cetakLaporanHarian(){
     var m2 = n2(Ln.totalM2) > n2(Ln.panjangTotal);
     if(m2){ totM2 += n2(b.terpasangM); tgtM2 += n2(b.targetM); } else { totM += n2(b.terpasangM); tgtM += n2(b.targetM); }
     return '<tr><td class="c">'+(i+1)+'</td><td>'+esc(Ln.noLine)+'<br><small>'+esc(Ln.noDWG||'')+'</small></td>'+
-      '<td>'+esc(Ln.ringkasUkuran||'')+'</td><td class="r">'+f1(b.targetM)+'</td><td class="r">'+f1(b.terpasangM)+'</td>'+
+      '<td class="c">'+esc(Ln.ringkasUkuran ? String(Ln.ringkasUkuran).split(' — ')[0].replace(/^[\d.]+\s*/,'').slice(0,28) : (bedahNoLine(Ln.noLine).ukuran ? ukuranTeks(bedahNoLine(Ln.noLine).ukuran)+'"' : ''))+'</td><td class="r">'+f1(b.targetM)+'</td><td class="r">'+f1(b.terpasangM)+'</td>'+
       '<td class="c">'+(m2?'m²':'m')+'</td><td>'+esc(b.status||'')+'</td><td>'+esc(b.faktorHambat||'')+'</td></tr>';
   }).join('') || '<tr><td colspan="8" class="c">Tidak ada pekerjaan tercatat</td></tr>';
 
