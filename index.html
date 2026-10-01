@@ -179,10 +179,10 @@ textarea{width:100%;padding:10px 12px;border:1px solid var(--garis);border-radiu
 
 <script>
 /* ═══════════ setelan ═══════════ */
-var SERVER_URL_BAWAAN = "https://script.google.com/macros/s/AKfycbwNSplfYB5JJCabBKzP8_1Y1GST_rIz9IxSdieA97iRyJLZ2Vc1VNu6QkPK1p09-A/exec";   // isi URL /exec di sini setelah deploy, agar tidak perlu diketik pengguna
+var SERVER_URL_BAWAAN = "https://script.google.com/macros/s/AKfycbynled7CPw8wTQl6CqpRKf8SeUqDFjKpFHzRrmUlcB52ILCx7J7y1ZnDc9DDpPEF3LL/exec";   // isi URL /exec di sini setelah deploy, agar tidak perlu diketik pengguna
 
 var S = {
-  url: localStorage.getItem('ins_url') || SERVER_URL_BAWAAN,
+  url: localStorage.getItem('ins_url_v4') || SERVER_URL_BAWAAN,
   nama: '', peran: '', master: null,
   halaman: 'harian',
   tanggal: hariIni(), area: 'MA1',
@@ -238,7 +238,7 @@ if(!S.url) el('gServer').classList.remove('sembunyi');
 el('gUrl').value = S.url;
 el('gSimpanUrl').onclick = function(){
   S.url = el('gUrl').value.trim();
-  localStorage.setItem('ins_url', S.url);
+  localStorage.setItem('ins_url_v4', S.url);
   el('gPesan').innerHTML = '<div class="pesan ok">Alamat server disimpan.</div>';
 };
 el('gUjiUrl').onclick = function(){
@@ -388,7 +388,7 @@ function namaSpk(id){ var s = spkDari(id); return s ? s.noSPK : (id ? '(SPK terh
 function v4Peringatan(){
   if(S.v4ok) return '';
   return '<div class="pesan bad"><b>Modul V4 belum aktif di server.</b> SPK, laporan harian, foto harian, dan dashboard '+
-    'membutuhkan berkas <b>ModulV4.gs</b> di Apps Script (lihat langkah pemasangan). '+
+    'membutuhkan server versi 4 (<b>Server_Insulation_BMKP_V4.gs</b>) di Apps Script. '+
     (S.v4pesan ? '<div class="mini" style="margin-top:4px">Pesan server: '+esc(S.v4pesan)+'</div>' : '')+'</div>';
 }
 
@@ -782,8 +782,11 @@ function kartuAbsensi(){
   var kar = karyawanArea(S.area);
   if(!kar.length) return '<div class="kartu"><h3>Absensi manual</h3><div class="mini">Belum ada pekerja terdaftar untuk area '+esc(S.area)+'. Isi di menu Master.</div></div>';
   var manual = {}; ((S.lap && S.lap.manual) || []).forEach(function(a){ manual[a.nama]=a.status; });
-  var finger = {}; (S.harian.absensi||[]).forEach(function(a){ finger[a.nama]=a; });
-  var adaFinger = (S.harian.absensi||[]).length > 0;
+  var dariMesin = (S.harian.absensi||[]).filter(function(a){
+    return String(a.sumber||'').toLowerCase().indexOf('finger')>=0 || a.jamMasuk;
+  });
+  var finger = {}; dariMesin.forEach(function(a){ finger[a.nama]=a; });
+  var adaFinger = dariMesin.length > 0;
   var keb = kebutuhanPekerja(S.area, S.tanggal);
   var hadir = Object.keys(manual).filter(function(n){ return manual[n]==='Hadir'; }).length;
   return '<div class="kartu"><h3>Absensi manual — '+esc(S.area)+'</h3>'+
@@ -2975,7 +2978,7 @@ function pgPengguna(){
    ═════════════════════════════════════════════════════════════════════ */
 
 var APP_VERSI = '4.0';
-var CODEGS_VERSI = '3.0';   // Code.gs tetap versi 3; tambahan V4 ada di ModulV4.gs
+var CODEGS_VERSI = '4.0';   // server satu berkas: Server_Insulation_BMKP_V4.gs
 var HADIR_JEDA = 60000;        // kirim kabar "saya sedang membuka" tiap 60 detik
 var _hadirTimer = null;
 
@@ -3072,7 +3075,7 @@ function pgSinkron(){
   };
   if(bolehUbah && el('skSimpanUrl')) el('skSimpanUrl').onclick = function(){
     S.url = el('skUrl').value.trim();
-    localStorage.setItem('ins_url', S.url);
+    localStorage.setItem('ins_url_v4', S.url);
     el('skUrlPesan').innerHTML = '<div class="pesan ok">Alamat server disimpan di perangkat ini.</div>';
   };
 
@@ -3112,10 +3115,10 @@ function periksaSinkron(){
     baris(j.versiServer===CODEGS_VERSI?'ok':'warn','Versi Code.gs di server',
       'v'+(j.versiServer||'tidak dilaporkan')+(j.versiServer===CODEGS_VERSI?' (cocok)':' — beda dengan yang diharapkan (v'+CODEGS_VERSI+')'));
     return api('v4Status').then(function(v){
-      baris('ok','Modul V4 (ModulV4.gs)', 'v'+v.versi+' — SPK '+v.tabel.SPK+' · line ber-SPK '+v.tabel.LineSPK+
+      baris('ok','Fitur V4 di server', 'v'+v.versi+' — SPK '+v.tabel.SPK+' · line ber-SPK '+v.tabel.LineSPK+
         ' · laporan '+v.tabel.LaporanHarian+' · foto '+v.tabel.FotoHarian+' · absen manual '+v.tabel.AbsenManual+' · batas foto '+v.batasFoto);
     }, function(e){
-      baris('bad','Modul V4 (ModulV4.gs)', 'belum aktif — '+e.message+'. Tambahkan berkas ModulV4.gs di bawah Code.gs lalu Terapkan versi baru');
+      baris('bad','Fitur V4 di server', 'belum aktif — '+e.message+'. Tempel Server_Insulation_BMKP_V4.gs ke Code.gs lalu deploy versi baru');
     }).then(function(){ return api('periksaSinkron'); });
   }).then(function(j){
     baris('ok','Spreadsheet basis data', j.namaSheet);
@@ -3216,7 +3219,7 @@ function pgSetelan(){
     }).catch(function(e){ sibuk(false); kabar(e.message,'bad'); });
   };
   el('sSimpanUrl').onclick = function(){
-    S.url = el('sUrl').value.trim(); localStorage.setItem('ins_url', S.url); kabar('Alamat server disimpan.');
+    S.url = el('sUrl').value.trim(); localStorage.setItem('ins_url_v4', S.url); kabar('Alamat server disimpan.');
   };
   el('sUji').onclick = function(){
     sibuk(true,'Menguji...');
