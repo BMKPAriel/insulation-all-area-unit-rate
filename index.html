@@ -2944,30 +2944,71 @@ function gambarKar(){
 }
 
 /* ═══════════════════ PENGGUNA ═══════════════════ */
+function waktuMasuk(t){
+  if(!t) return '—';
+  var d = new Date(t);
+  if(isNaN(d.getTime())) return esc(t);
+  return p2(d.getDate())+' '+BULAN[d.getMonth()]+' '+d.getFullYear()+' · '+p2(d.getHours())+':'+p2(d.getMinutes());
+}
+
 function pgPengguna(){
-  judul('Pengguna', 'PIN terlihat di sini — hanya Anda yang bisa membuka halaman ini');
+  judul('Pengguna', 'PIN terlihat di sini — hanya peran manajemen yang bisa membuka halaman ini');
   var P = S.master.pengguna || [];
+  var opsiPeran = ['lapangan','manajemen','baca'];
   el('isi').innerHTML =
-   '<div class="pesan info">Ingatkan tim: jangan memakai PIN yang sama dengan ATM atau kunci layar HP.</div>'+
-   '<div class="gulir"><table><thead><tr><th>Nama</th><th style="width:90px">PIN</th><th style="width:130px">Peran</th>'+
-   '<th style="width:80px">Aktif</th><th style="width:130px">Terakhir masuk</th></tr></thead><tbody>'+
-   P.map(function(u){
-     return '<tr><td><b>'+esc(u.nama)+'</b></td><td><b>'+esc(u.pin)+'</b></td><td>'+esc(u.peran)+'</td>'+
-       '<td>'+esc(u.aktif)+'</td><td class="mini">'+esc(u.terakhirMasuk||'—')+'</td></tr>';
+   '<div class="pesan info">Ubah PIN, peran, atau status langsung di tabel, lalu tekan <b>Simpan</b> di baris itu. '+
+   'Ingatkan tim: jangan memakai PIN yang sama dengan ATM atau kunci layar HP.</div>'+
+   '<div class="gulir"><table><thead><tr><th style="min-width:150px">Nama</th><th style="width:120px">PIN</th><th style="width:150px">Peran</th>'+
+   '<th style="width:100px">Aktif</th><th style="width:150px">Terakhir masuk</th><th style="width:100px"></th></tr></thead><tbody>'+
+   P.map(function(u, i){
+     return '<tr data-baris="'+i+'"><td><b>'+esc(u.nama)+'</b>'+(u.nama===S.nama?' <span class="mini">(Anda)</span>':'')+'</td>'+
+       '<td><input data-u="pin" value="'+esc(u.pin)+'" inputmode="numeric" maxlength="8" style="font-weight:700;letter-spacing:1px"></td>'+
+       '<td><select data-u="peran">'+opsiPeran.map(function(p){ return '<option'+(p===u.peran?' selected':'')+'>'+p+'</option>'; }).join('')+'</select></td>'+
+       '<td><select data-u="aktif">'+['YA','TIDAK'].map(function(p){ return '<option'+(p===String(u.aktif||'YA').toUpperCase()?' selected':'')+'>'+p+'</option>'; }).join('')+'</select></td>'+
+       '<td class="mini">'+waktuMasuk(u.terakhirMasuk)+'</td>'+
+       '<td><button class="btn kecil" data-simpanu="'+i+'">Simpan</button></td></tr>';
    }).join('')+'</tbody></table></div>'+
-   '<div class="kartu" style="margin-top:12px"><h3>Tambah / ubah pengguna</h3><div class="gr2">'+
-     '<div><label>Nama</label><input id="uNama"></div>'+
-     '<div><label>PIN</label><input id="uPin" value="1234"></div>'+
-     '<div><label>Peran</label><select id="uPeran"><option>lapangan</option><option>manajemen</option><option>baca</option></select></div>'+
-     '<div><label>Aktif</label><select id="uAktif"><option>YA</option><option>TIDAK</option></select></div>'+
-   '</div><button class="btn kecil" style="margin-top:10px" id="uSimpan">Simpan</button></div>';
-  el('uSimpan').onclick = function(){
-    var nama = el('uNama').value.trim();
-    if(!nama){ kabar('Nama harus diisi.','bad'); return; }
+   '<div class="kartu" style="margin-top:12px"><h3>Tambah pengguna baru</h3><div class="gr2">'+
+     '<div><label>Nama</label><input id="uNama" placeholder="contoh: Roli"></div>'+
+     '<div><label>PIN</label><input id="uPin" value="1234" inputmode="numeric" maxlength="8"></div>'+
+     '<div><label>Peran</label><select id="uPeran">'+opsiPeran.map(function(p){ return '<option>'+p+'</option>'; }).join('')+'</select></div>'+
+   '</div><button class="btn kecil" style="margin-top:10px" id="uSimpan">Tambah pengguna</button>'+
+   '<div class="mini" style="margin-top:8px"><b>lapangan</b> = input harian, SPK, line, absensi · <b>manajemen</b> = semua menu termasuk Master, Pengguna, Pengaturan · <b>baca</b> = hanya melihat Dashboard, SPK, Dokumentasi, Rekap.</div></div>';
+
+  function kirim(data, pesan){
     sibuk(true,'Menyimpan...');
-    api('penggunaSimpan',{target:nama, pin:el('uPin').value.trim(), peran:el('uPeran').value, aktif:el('uAktif').value})
-     .then(function(j){ sibuk(false); S.master.pengguna=j.pengguna; kabar('Tersimpan.'); pgPengguna(); })
-     .catch(function(e){ sibuk(false); kabar(e.message,'bad'); });
+    return api('penggunaSimpan', data)
+      .then(function(j){ sibuk(false); S.master.pengguna=j.pengguna; kabar(pesan); pgPengguna(); })
+      .catch(function(e){ sibuk(false); kabar(e.message,'bad'); });
+  }
+
+  el('isi').onclick = function(e){
+    var b = e.target.closest('[data-simpanu]'); if(!b) return;
+    var u = P[+b.dataset.simpanu], tr = b.closest('tr');
+    var pin = tr.querySelector('[data-u="pin"]').value.trim();
+    var peran = tr.querySelector('[data-u="peran"]').value;
+    var aktif = tr.querySelector('[data-u="aktif"]').value;
+    if(!/^\d{4,8}$/.test(pin)){ kabar('PIN harus angka, 4 sampai 8 digit.','bad'); return; }
+    if(u.nama===S.nama && (peran!=='manajemen' || aktif!=='YA')){
+      kabar('Peran atau status akun Anda sendiri tidak boleh diturunkan, supaya Anda tidak terkunci keluar.','bad'); return;
+    }
+    if(u.nama===S.nama && pin!==String(u.pin)){
+      try{
+        var ing = JSON.parse(localStorage.getItem('ins_ingat')||'null');
+        if(ing && ing.nama===S.nama){ ing.pin = pin; localStorage.setItem('ins_ingat', JSON.stringify(ing)); }
+      }catch(er){}
+    }
+    kirim({target:u.nama, pin:pin, peranBaru:peran, aktif:aktif}, 'Data '+u.nama+' tersimpan.');
+  };
+
+  el('uSimpan').onclick = function(){
+    var nama = el('uNama').value.trim(), pin = el('uPin').value.trim();
+    if(!nama){ kabar('Nama harus diisi.','bad'); return; }
+    if(!/^\d{4,8}$/.test(pin)){ kabar('PIN harus angka, 4 sampai 8 digit.','bad'); return; }
+    if(P.some(function(u){ return String(u.nama).trim().toLowerCase()===nama.toLowerCase(); })){
+      kabar('Nama itu sudah ada. Ubah langsung di tabel di atas.','info'); return;
+    }
+    kirim({target:nama, pin:pin, peranBaru:el('uPeran').value, aktif:'YA'}, 'Pengguna '+nama+' ditambahkan.');
   };
 }
 
@@ -2978,7 +3019,7 @@ function pgPengguna(){
    ═════════════════════════════════════════════════════════════════════ */
 
 var APP_VERSI = '4.0';
-var CODEGS_VERSI = '4.0';   // server satu berkas: Server_Insulation_BMKP_V4.gs
+var CODEGS_VERSI = '4.1';   // server satu berkas: Server_Insulation_BMKP_V4.gs
 var HADIR_JEDA = 60000;        // kirim kabar "saya sedang membuka" tiap 60 detik
 var _hadirTimer = null;
 
